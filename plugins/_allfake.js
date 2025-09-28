@@ -7,7 +7,7 @@ const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
 var handler = m => m
 handler.all = async function (m) { 
-global.canalIdM = ["120363402839382986@newsletter", "120363401404146384@newsletter"]
+global.canalIdM = ["120363402839382986@newsletter", "120363419164978167@newsletter"]
 global.canalNombreM = ["⏤͟͟͞͞𝙎𝙚𝙣𝙠𝙤 - 𝙗𝙤𝙩 𝙤𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝙘𝙝𝙖𝙣𝙣𝙚𝙡 🦊", "⏤͟͟͞͞𝙎𝙚𝙣𝙠𝙤 - 𝙗𝙤𝙩 𝙘𝙖𝙣𝙖𝙡 𝙤𝙛𝙞𝙘𝙞𝙖𝙡 🦊"]
 global.channelRD = await getRandomChannel()
 
@@ -21,13 +21,13 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 
 var canal = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'  
 var comunidad = 'https://chat.whatsapp.com/I0dMp2fEle7L6RaWBmwlAa'
-var git = 'https://github.com/The-King-Destroy'
-var github = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot' 
-var correo = 'thekingdestroy507@gmail.com'
+var git = 'https://github.com/ittschinitaaa'
+var github = 'https://github.com/ittschinitaaa/Senko-Bot' 
+var correo = 'itts.chinitaaa@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
-global.packsticker = `°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\nᰔᩚ Usuario: ${nombre}\n❀ Bot: ${botname}\n✦ Fecha: ${fecha}\nⴵ Hora: ${moment.tz('America/Caracas').format('HH:mm:ss')}`
+global.packsticker = `°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n👑 Usuario: ${nombre}\n🤖 Bot: ${botname}\n📅 Fecha: ${fecha}\n⏰ Hora: ${moment.tz('America/Caracas').format('HH:mm:ss')}`
 global.packsticker2 = `\n°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n\n${dev}`
   
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
