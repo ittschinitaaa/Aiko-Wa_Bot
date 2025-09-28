@@ -12,18 +12,18 @@ global.botNumber = "" //Ejemplo: 573218138672
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-"573196588149",
-"5492916450307",
-"5216671548329"
+"923256941884",
+"5492644996684",
+"573243768166"
 ]
 
-global.suittag = ["573196588149"] 
+global.suittag = ["923256941884"] 
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = "Baileys Multi Device"
-global.vs = "^1.8.2|Latest"
+global.vs = "^1.0.0 | Latest"
 global.nameqr = "YukiBot-MD"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
