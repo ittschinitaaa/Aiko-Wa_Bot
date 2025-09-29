@@ -11,6 +11,7 @@ const chatLabel = m.isGroup ? (await conn.getName(m.chat) || 'Grupal') : 'Privad
 const horario = `${moment.tz('America/Caracas').format('DD/MM/YYYY hh:mm:ss A')}`
 const invite = `❀ 𝗜𝗡𝗩𝗜𝗧𝗔𝗖𝗜𝗢𝗡 𝗔 𝗨𝗡 𝗚𝗥𝗨𝗣𝗢\n\nꕥ *Usuario* » ${tag}\n✿ *Chat* » ${chatLabel}\n✰ *Fecha* » ${horario}\n✦ *Link* » ${link}`
 await conn.reply(`${text}@s.whatsapp.net`, invite, m, { mentions: [m.sender] })
+await m.react('✅')
 m.reply(`❀ El enlace de invitación fue enviado al usuario correctamente.`)
 }
 
