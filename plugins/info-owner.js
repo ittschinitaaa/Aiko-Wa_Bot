@@ -16,9 +16,9 @@ let handler = async (m, { conn }) => {
   ], m);
 }
 
-handler.help = ["creador", "owner"];
+handler.help = ["creadora", "owner"];
 handler.tags = ["info"];
-handler.command = ['owner', 'creator', 'creador', 'dueño'];
+handler.command = ['owner', 'creator', 'creadora', 'dueña'];
 
 export default handler;
 
