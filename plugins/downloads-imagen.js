@@ -10,9 +10,9 @@ if (urls.length < 2) return conn.reply(m.chat, '✧ No se encontraron suficiente
 const medias = urls.slice(0, 10).map(url => ({ type: 'image', data: { url } }))
 const caption = `❀ Resultados de búsqueda para: ${text}`
 await conn.sendSylphy(m.chat, medias, { caption, quoted: m })
-await m.react('✔️')
+await m.react('✅')
 } catch (error) {
-await m.react('✖️')
+await m.react('❌')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
 }}
 
