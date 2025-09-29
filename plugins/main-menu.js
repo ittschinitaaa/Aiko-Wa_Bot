@@ -170,6 +170,8 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ✿ Comandos de *Útilidades*.
 ✦ *#help • #menu*
 > ⸙ Ver el menú de comandos.
+✦ *#creadora • #owner*
+> ⸙ Muestra el contactó de la creadora.
 ✦ *#sc • #script*
 > ⸙ Link del repositorio oficial del Bot.
 ✦ *#sug • #suggest*
@@ -276,6 +278,8 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Establecer un mensaje de bienvenida personalizado.
 ✦ *#kick* + <@usuario> | {mencion}
 > ⸙ Expulsar a un usuario del grupo.
+✦ *#kickall • #purgar*
+> ⸙ Elimina a todos los usuarios de un grupo.
 ✦ *#nsfw* + [enable/disable]
 > ⸙ Activar/desactivar los comandos NSFW
 ✦ *#onlyadmin* + [enable/disable]
