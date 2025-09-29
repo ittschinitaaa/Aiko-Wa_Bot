@@ -17,10 +17,10 @@ return conn.reply(m.chat, `ꕥ No se encontraron resultados para "${text}".`, m)
 }
 const medias = results.slice(0, 10).map(img => ({ type: 'image', data: { url: img.image_large_url } }))
 await conn.sendSylphy(m.chat, medias, {
-caption: `❀ Pinterest - Search ❀\n\n✧ Búsqueda » "${text}"\n✐ Resultados » ${medias.length}`, quoted: m })
-await m.react('✔️')
+caption: `🦊 Pinterest - Search 🦊\n\n🔎 Búsqueda » "${text}"\n📝 Resultados » ${medias.length}`, quoted: m })
+await m.react('✅')
 }} catch (e) {
-await m.react('✖️')
+await m.react('❌')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n` + e, m)
 }}
 
