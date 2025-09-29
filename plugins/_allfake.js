@@ -19,8 +19,8 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
-var canal = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'  
-var comunidad = 'https://chat.whatsapp.com/I0dMp2fEle7L6RaWBmwlAa'
+var canal = 'https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x'  
+var comunidad = 'https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l'
 var git = 'https://github.com/ittschinitaaa'
 var github = 'https://github.com/ittschinitaaa/Senko-Bot' 
 var correo = 'itts.chinitaaa@gmail.com'
