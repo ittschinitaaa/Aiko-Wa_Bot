@@ -3,7 +3,7 @@ import { WAMessageStubType } from '@whiskeysockets/baileys'
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
 const username = `@${userId.split('@')[0]}`
-const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/rq6lzs.jpg')
 const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Mexico_City", day: 'numeric', month: 'long', year: 'numeric' })
 const groupSize = groupMetadata.participants.length + 1
 const desc = groupMetadata.desc?.toString() || 'Sin descripción'
@@ -13,7 +13,7 @@ return { pp, caption, mentions: [userId] }
 }
 async function generarDespedida({ conn, userId, groupMetadata, chat }) {
 const username = `@${userId.split('@')[0]}`
-const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/rq6lzs.jpg')
 const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Mexico_City", day: 'numeric', month: 'long', year: 'numeric' })
 const groupSize = groupMetadata.participants.length - 1
 const desc = groupMetadata.desc?.toString() || 'Sin descripción'
