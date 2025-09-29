@@ -74,7 +74,7 @@ let handler = async (m, { conn, participants, isROwner }) => {
 
 handler.help = ['kickall']
 handler.tags = ['owner']
-handler.command = ['kickall', 'purga', 'expulsartodos']
+handler.command = ['kickall', 'purgar', 'expulsartodos']
 handler.group = true
 handler.rowner = true
 handler.botAdmin = true
