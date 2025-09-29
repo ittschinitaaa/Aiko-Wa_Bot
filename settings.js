@@ -44,7 +44,7 @@ global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.group = "https://chat.whatsapp.com/HaKf6ezcwdbGzmH782eBal"
-global.community = "https://chat.whatsapp.com/G0kXqsteJFU74yrLtg79o6"
+global.community = "https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x"
 global.channel = "https://whatsapp.com/channel/0029Vb64nWqLo4hb8cuxe23n"
 global.github = "https://github.com/itts.chinitaaa/Senko-Bot"
 global.gmail = "itts.chinitaaa@gmail.com"
