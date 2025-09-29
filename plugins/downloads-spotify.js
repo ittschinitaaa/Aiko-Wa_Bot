@@ -18,7 +18,7 @@ const res = await axios.get(`${global.APIs.delirius.url}/download/spotifydl?url=
 const d = res.data?.data
 if (!res.data?.status || !d?.url) throw new Error("ꕥ No se pudo obtener el audio.")
 data = { title: d.title || info?.title || "Desconocido", artist: d.author || info?.artist || "Desconocido", album: info?.album || "Desconocido", duration: info?.duration || `${Math.floor(d.duration / 60000)}:${String(Math.floor((d.duration % 60000) / 1000)).padStart(2, '0')}`, popularity: info?.popularity || "Desconocido", release: info?.release || "Desconocido", type: d.type, source: d.source, image: d.image || info?.image, download: d.url, url: info?.url || trackUrl }
-const caption = `「✦」Descargando *<${data.title}>*\n\n> ꕥ Autor » *${data.artist}*\n${data.album && data.album !== "Desconocido" ? `> ❑ Álbum » *${data.album}*\n` : ''}${data.duration ? `> ⴵ Duración » *${data.duration}*\n` : ''}${data.popularity && data.popularity !== "Desconocido" ? `> ✰ Popularidad » *${data.popularity}*\n` : ''}${data.release && data.release !== "Desconocido" ? `> ☁︎ Publicado » *${data.release}*\n` : ''}${data.url ? `> 🜸 Enlace » ${data.url}` : ''}`
+const caption = `「✦」Descargando *<${data.title}>*\n\n> 🦊 Autor » *${data.artist}*\n${data.album && data.album !== "Desconocido" ? `> 🗂 Álbum » *${data.album}*\n` : ''}${data.duration ? `> ⏰ Duración » *${data.duration}*\n` : ''}${data.popularity && data.popularity !== "Desconocido" ? `> 🌟 Popularidad » *${data.popularity}*\n` : ''}${data.release && data.release !== "Desconocido" ? `> 💻 Publicado » *${data.release}*\n` : ''}${data.url ? `> 🔗 Enlace » ${data.url}` : ''}`
 await conn.sendMessage(m.chat, {
 text: caption,
 contextInfo: {
@@ -34,9 +34,9 @@ mediaUrl: data.url,
 sourceUrl: data.url,
 }}}, { quoted: m })
 await conn.sendMessage(m.chat, { audio: { url: data.download }, fileName: `${data.title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
-await m.react('✔️')
+await m.react('✅')
 } catch (err) {
-await m.react('✖️')
+await m.react('❌')
 m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${err.message}`)
 }}
 
