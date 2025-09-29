@@ -6,7 +6,7 @@ try {
 await m.react('🕒')
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
 await m.react('✅')
-m.reply(`❀ Fuiste agregado como admin del grupo con exito.`)
+m.reply(`❀ Fuiste agregada como admin del grupo con exito.`)
 } catch (error) {
 await m.react('❌')
 m.reply(`⚠︎ Se ha producido un problema\n> Usa *${usedPrefix}report* para informarlo\n\n${error.message}`)
