@@ -276,6 +276,8 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Establece un bot como primario del grupo.
 ✦ *#setwelcome* + [texto]
 > ⸙ Establecer un mensaje de bienvenida personalizado.
+✦ *#testwelcome • #testbye*
+> ⸙ Testea la bienvenida o despedida personalizada.
 ✦ *#kick* + <@usuario> | {mencion}
 > ⸙ Expulsar a un usuario del grupo.
 ✦ *#kickall • #purgar*
