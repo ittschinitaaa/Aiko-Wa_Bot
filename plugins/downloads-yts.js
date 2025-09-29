@@ -10,16 +10,16 @@ let teks = results.all.map(v => {
 switch (v.type) {
 case 'video': return `「✦」Resultados de la búsqueda para *<${text}>*
 
-❀ *${v.title}*
-> ✦ Canal » *${v.author.name}*
-> ⴵ Duración » *${v.timestamp}*
-> ✐ Subido » *${v.ago}*
-> ✰ Vistas » *${v.views}*
-> 🜸 Enlace » ${v.url}`}}).filter(v => v).join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
+🦊 *${v.title}*
+> 👤 Canal » *${v.author.name}*
+> ⏰ Duración » *${v.timestamp}*
+> 💻 Subido » *${v.ago}*
+> 👥 Vistas » *${v.views}*
+> 🔗 Enlace » ${v.url}`}}).filter(v => v).join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
 await conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m)
-await m.react('✔️')
+await m.react('✅')
 } catch (e) {
-await m.react('✖️')
+await m.react('❌')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n` + e.message, m)
 }}
 
