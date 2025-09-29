@@ -1,5 +1,6 @@
 const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command }) => {
 const pesan = args.join` `
+await m.react('🦊')
 const oi = `*» INFO :* ${pesan}`
 let teks = `*!  MENCION GENERAL  !*\n  *PARA ${participants.length} MIEMBROS* 🗣️\n\n ${oi}\n\n╭  ┄ 𝅄 ۪꒰ \`⡞᪲=͟͟͞${botname}≼᳞ׄ\` ꒱ ۟ 𝅄 ┄\n`
 for (const mem of participants) {
