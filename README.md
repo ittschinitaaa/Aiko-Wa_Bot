@@ -1,6 +1,6 @@
-<h1 align="center">✦ Yυƙι Sυσυ ✦</h1>
+<h1 align="center">⏤͟͟͞͞𝙎𝙀𝙉𝙆𝙊 𝘽𝙊𝙏 ☆</h1>
 
-<img src= "https://files.catbox.moe/om9jai.jpg">
+<img src= "https://files.catbox.moe/rq6lzs.jpg">
 </p>
 
 ### *`❕️ Información importante`*
