@@ -30,6 +30,8 @@ let handler = async (m, { conn, participants, isROwner }) => {
 
   try {
     // Mensaje de advertencia
+    await m.react('⚠️')
+    
     const warningMsg = `
 ⚠️ 🚨 ALERTA MÁXIMA 🚨 ⚠️
 
@@ -53,6 +55,8 @@ let handler = async (m, { conn, participants, isROwner }) => {
     await conn.groupParticipantsUpdate(m.chat, jidsToKick, 'remove')
 
     // Mensaje de confirmación
+    await m.react('✅')
+    
     const confirmMsg = `
 💥 ¡PURGA COMPLETADA! 💥
 
