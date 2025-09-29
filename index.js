@@ -363,6 +363,22 @@ console.log(chalk.gray(`→ Archivos de la carpeta TMP eliminados`))
 } catch {
 console.log(chalk.gray(`→ Los archivos de la carpeta TMP no se pudieron eliminar`));
 }}, 30 * 1000)
+// autobio
+setInterval(async () => {
+  if (stopped === 'close' || !conn || !conn?.user) return;
+  const _uptime = process.uptime() * 1000;
+  const uptime = clockString(_uptime);
+  const bio = `🔥𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 | 🇨🇳 𝖀𝖕𝖙𝖎𝖒𝖊 : ${uptime}`;
+  await conn?.updateProfileStatus(bio).catch((_) => _);
+}, 60000);
+function clockString(ms) {
+  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
+  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
+  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
+  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
+  return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
+}
+// fin de autobio
 _quickTest().catch(console.error)
 async function isValidPhoneNumber(number) {
 try {
