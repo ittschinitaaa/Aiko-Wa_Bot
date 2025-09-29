@@ -40,20 +40,20 @@ const pp = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://raw
 const text = `*「✦」 Perfil ◢ ${name} ◤*
 ${description}
 
-❀ Cumpleaños » *${cumpleanos}*
+🥳 Cumpleaños » *${cumpleanos}*
 ⚥ Género » *${genero}*
-♡ Casado con » *${casado}*
+💞 Casado con » *${casado}*
 
-☆ Experiencia » *${exp.toLocaleString()}*
-❖ Nivel » *${nivel}*
-# Puesto » *#${rank}*
-➨ Progreso » *${progreso}*
-⸙ Premium » ${premium ? `✔️ (*${isLeft}*)` : '✖️'}
+🌟 Experiencia » *${exp.toLocaleString()}*
+🎖 Nivel » *${nivel}*
+🏅 Puesto » *#${rank}*
+🎖 Progreso » *${progreso}*
+💎 Premium » ${premium ? `✅ (*${isLeft}*)` : '❌'}
 
 ꕥ Harem » *${haremCount}*
 ♤ Valor total » *${haremValue.toLocaleString()}*${favLine}
-⛁ Coins totales » *${total.toLocaleString()} ${currency}*
-❒ Comandos totales » *${user.commands || 0}*`
+🪙 Coins totales » *${total.toLocaleString()} ${currency}*
+✨ Comandos totales » *${user.commands || 0}*`
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: text, mentions: [userId] }, { quoted: fkontak })
 } catch (error) {
 await m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
