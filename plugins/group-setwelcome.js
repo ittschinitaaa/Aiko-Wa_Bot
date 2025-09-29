@@ -1,3 +1,5 @@
+// Codigo arreglado por China
+// Github: github.com/ittschinitaaa
 import fetch from 'node-fetch'
 import fs from 'fs'
 import { generarBienvenida, generarDespedida } from './_welcome.js'
