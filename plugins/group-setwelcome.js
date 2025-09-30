@@ -16,15 +16,19 @@ const handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) =>
     switch (command) {
       case 'setwelcome': {
         if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de bienvenida.\n> Puedes usar {usuario} para mencionar al usuario, {grupo} para mencionar el nombre del grupo y {desc} para mencionar la descripción del grupo.\n\n✐ Ejemplo: ${usedPrefix}setwelcome Bienvenido {usuario} a {grupo}!`)
+       await m.react('❌')   
         chat.sWelcome = value
         m.reply(`ꕥ Has establecido el mensaje de bienvenida correctamente.\n> Puedes usar ${usedPrefix}testwelcome para ver cómo se verá el mensaje de bienvenida.`)
+       await m.react('✅')   
         break
       }
 
       case 'setbye': {
         if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de despedida.\n> Puedes usar {usuario}, {grupo} y {desc} como variables dinámicas.\n\n✐ Ejemplo: ${usedPrefix}setbye Adiós {usuario}, te extrañaremos en {grupo}!`)
+        await m.react('❌')   
         chat.sBye = value
         m.reply(`ꕥ Has establecido el mensaje de despedida correctamente.\n> Puedes usar ${usedPrefix}testbye para ver cómo se verá el mensaje de despedida.`)
+       await m.react('✅')   
         break
       }
 
