@@ -33,6 +33,7 @@ const handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) =>
         const { pp: ppWel, caption: captionWel, mentions: mentionsWel } = await generarBienvenida({ conn, userId: m.sender, groupMetadata, chat })
         await conn.sendMessage(m.chat, { image: { url: ppWel }, caption: captionWel, mentions: mentionsWel }, { quoted: m })
         try { fs.unlinkSync(ppWel) } catch {}
+        await m.react('✅')   
         break
       }
 
@@ -41,6 +42,7 @@ const handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) =>
         const { pp: ppBye, caption: captionBye, mentions: mentionsBye } = await generarDespedida({ conn, userId: m.sender, groupMetadata, chat })
         await conn.sendMessage(m.chat, { image: { url: ppBye }, caption: captionBye, mentions: mentionsBye }, { quoted: m }) // ✅ corregido
         try { fs.unlinkSync(ppBye) } catch {}
+        await m.react('✅')   
         break
       }
     }
