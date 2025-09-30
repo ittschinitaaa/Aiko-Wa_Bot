@@ -10,13 +10,13 @@ const handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) =>
 
   if (command === 'setgp') {
     return m.reply(`✦ Ingresa la categoría que deseas modificar para tu grupo.\n\n🜸 Categorías disponibles:\n• ${usedPrefix}gpname <nuevo nombre>\n> Cambia el nombre del grupo\n• ${usedPrefix}gpdesc <nueva descripción>\n> Modifica la descripción del grupo\n• ${usedPrefix}gpbanner <imagen>\n> Establece una nueva imagen para el grupo (responde a una imagen)\n• ${usedPrefix}setwelcome <mensaje>\n> Configura el mensaje de bienvenida para nuevos miembros\n• ${usedPrefix}setbye <mensaje>\n> Establece el mensaje de despedida al salir un usuario\n• ${usedPrefix}testwelcome\n> Simula el mensaje de bienvenida\n• ${usedPrefix}testbye\n> Simula el mensaje de despedida`)
+   await m.react('⚠️')   
   }
 
   try {
     switch (command) {
       case 'setwelcome': {
-        if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de bienvenida.\n> Puedes usar {usuario} para mencionar al usuario, {grupo} para mencionar el nombre del grupo y {desc} para mencionar la descripción del grupo.\n\n✐ Ejemplo: ${usedPrefix}setwelcome Bienvenido {usuario} a {grupo}!`)
-       await m.react('❌')   
+        if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de bienvenida.\n> Puedes usar {usuario} para mencionar al usuario, {grupo} para mencionar el nombre del grupo y {desc} para mencionar la descripción del grupo.\n\n✐ Ejemplo: ${usedPrefix}setwelcome Bienvenido {usuario} a {grupo}!`) 
         chat.sWelcome = value
         m.reply(`ꕥ Has establecido el mensaje de bienvenida correctamente.\n> Puedes usar ${usedPrefix}testwelcome para ver cómo se verá el mensaje de bienvenida.`)
        await m.react('✅')   
@@ -24,8 +24,7 @@ const handler = async (m, { conn, command, usedPrefix, text, groupMetadata }) =>
       }
 
       case 'setbye': {
-        if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de despedida.\n> Puedes usar {usuario}, {grupo} y {desc} como variables dinámicas.\n\n✐ Ejemplo: ${usedPrefix}setbye Adiós {usuario}, te extrañaremos en {grupo}!`)
-        await m.react('❌')   
+        if (!value) return m.reply(`ꕥ Debes enviar un mensaje para establecerlo como mensaje de despedida.\n> Puedes usar {usuario}, {grupo} y {desc} como variables dinámicas.\n\n✐ Ejemplo: ${usedPrefix}setbye Adiós {usuario}, te extrañaremos en {grupo}!`)   
         chat.sBye = value
         m.reply(`ꕥ Has establecido el mensaje de despedida correctamente.\n> Puedes usar ${usedPrefix}testbye para ver cómo se verá el mensaje de despedida.`)
        await m.react('✅')   
