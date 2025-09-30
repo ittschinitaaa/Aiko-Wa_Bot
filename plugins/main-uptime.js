@@ -1,28 +1,33 @@
-let handler = async (m, { conn }) => {
-    if (!global.botStart) global.botStart = new Date();
+let handler = async (m, { usedPrefix, command }) => {
+let uptime = await process.uptime()
+let runtime = `${packname}
 
-    let now = new Date();
-    let diff = now - global.botStart;
+✰ Tiempo activa: ${rTime(uptime)}`
+conn.reply(m.chat, runtime, m)
+}
+handler.help = ['uptime']
+handler.tags = ['main']
+handler.command = ['runtime', 'uptime']
 
-    let seconds = Math.floor(diff / 1000) % 60;
-    let minutes = Math.floor(diff / 1000 / 60) % 60;
-    let hours = Math.floor(diff / 1000 / 60 / 60) % 24;
-    let days = Math.floor(diff / 1000 / 60 / 60 / 24);
+export default handler
 
-    // Mensaje aesthetic
-    let uptimeMessage = `
-╭─❀ ⌛ 𝘼𝙘𝙩𝙞𝙫𝙤 ⌛ ❀─╮
-│
-│ 🌟 Días: ${days}
-│ 🌟 Horas: ${hours}
-│ 🌟 Minutos: ${minutes}
-│ 🌟 Segundos: ${seconds}
-│
-╰─❀ 𝙎𝙞𝙜𝙤 𝙛𝙪𝙣𝙘𝙞𝙤𝙣𝙖𝙣𝙙𝙤 𝙘𝙤𝙢𝙤 𝙨𝙞𝙚𝙢𝙥𝙧𝙚 ❀─╯
-`;
+const dd = new Date(new Date + 3600000);
+const time = dd.toLocaleString('en-US', { 
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: true 
+    });
 
-    conn.sendMessage(m.chat, { text: uptimeMessage }, { quoted: m });
+function rTime(seconds) {
+  seconds = Number(seconds);
+  var d = Math.floor(seconds / (3600 * 24));
+  var h = Math.floor((seconds % (3600 * 24)) / 3600);
+  var m = Math.floor((seconds % 3600) / 60);
+  var s = Math.floor(seconds % 60);
+  var dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dias, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
+  return dDisplay + hDisplay + mDisplay + sDisplay;
 };
-
-handler.command = ["uptime", "activado"];
-export default handler;
