@@ -176,7 +176,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 ✦ *#creadora • #owner*
 > ⸙ Muestra el contactó de la creadora.
 ✦ *#staff • #colaboradores*
-> ⸙ Muestra el equipo de staff zd la bot.
+> ⸙ Muestra el equipo de staff de la bot.
 ✦ *#sc • #script*
 > ⸙ Link del repositorio oficial del Bot.
 ✦ *#sug • #suggest*
