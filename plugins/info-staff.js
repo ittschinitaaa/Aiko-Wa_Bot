@@ -5,33 +5,14 @@ let staff = `ᥫ᭡ *EQUIPO DE AYUDANTES* ❀
 ✦ *Bot:* ${botname}
 ⚘ *Versión:* ${vs}
 
-❍ *Creador:*
+❍ *Creadora:*
 
-ᰔᩚ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜
-> 🜸 Rol » *Creador*
-> ✧ GitHub » https://github.com/The-King-Destroy
+ᰔᩚ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ
+> 🜸 Rol » *Creadora*
+> ✧ GitHub » https://github.com/ittschinitaaa
 
 ❒ *Colaboradores:*
-
-ᰔᩚ 𝓔𝓶𝓶𝓪 𝓥𝓲𝓸𝓵𝓮𝓽𝓼 𝓥𝓮𝓻𝓼𝓲ó𝓷 
-> 🜸 Rol » *Developer*
-> ✧ GitHub » https://github.com/Elpapiema
-
-ᰔᩚ Niño Piña
-> 🜸 Rol » *Developer*
-> ✧ GitHub » https://github.com/WillZek
-
-✧ ☆꧁༒ĹєǤ𝒆𝐧𝐃༒꧂☆
-> 🜸 Rol » *Developer*
-> ✧ GitHub » https://github.com/Diomar-s
-
-ᰔᩚ I'm Fz' (Tesis)
-> 🜸 Rol » *Developer*
-> ✧ GitHub » https://github.com/FzTeis
-
-ᰔᩚ Legna
-> 🜸 Rol » *Mini-Dev* 
-> ✧ GitHub » https://github.com/Legna-chan
+> ★ Sin colaboradores por el momento
 `
 await conn.sendFile(m.chat, img, 'yuki.jpg', staff.trim(), fkontak)
 }
