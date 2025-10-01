@@ -8,7 +8,7 @@ import chalk from 'chalk'
 import util from 'util'
 import * as ws from 'ws'
 // CORRECCIÓN: child removed (no export named 'child' in child_process)
-const { spawn, exec } = await import('child_process')
+const { child, spawn, exec } = await import('child_process')
 const { CONNECTING } = ws
 import { makeWASocket } from '../lib/simple.js'
 import { fileURLToPath } from 'url'
