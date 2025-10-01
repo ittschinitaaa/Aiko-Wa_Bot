@@ -185,6 +185,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Reportar fallas o problemas del bot.
 ✦ *#calcular • #cal*
 > ⸙ Calcular tipos de ecuaciones.
+✦ *#tamaño* + *[cantidad]*
 ✦ *#delmeta*
 > ⸙ Restablecer el pack y autor por defecto para tus stickers.
 ✦ *#getpic • #pfp* + [@usuario]
@@ -223,6 +224,8 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Descargar paquetes de NPMJS.
 ✦ *#google*
 > ⸙ Realizar búsquedas por Google.
+✦ *#horario*
+>  ⸙ muestra el horarios de distintos paises.
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
 ╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *PROFILES* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
