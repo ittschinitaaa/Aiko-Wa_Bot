@@ -1,9 +1,9 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
 let img = './lib/catalogo.jpg'
 let staff = `ᥫ᭡ *EQUIPO DE AYUDANTES* ❀
-✰ *Dueña:* 𝕮𝖍𝖎𝖓𝖆 🔥
-✦ *Bot:* ${botname}
-⚘ *Versión:* ${vs}
+👑 *Dueña:* 𝕮𝖍𝖎𝖓𝖆 🔥
+🤖 *Bot:* ${botname}
+🎖 *Versión:* ${vs}
 
 ❍ *Creadora:*
 
