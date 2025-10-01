@@ -175,6 +175,8 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Ver el menú de comandos.
 ✦ *#creadora • #owner*
 > ⸙ Muestra el contactó de la creadora.
+✦ #staff • #colaboradores*
+> ⸙ Muestra el equipo de staff zd la bot.
 ✦ *#sc • #script*
 > ⸙ Link del repositorio oficial del Bot.
 ✦ *#sug • #suggest*
