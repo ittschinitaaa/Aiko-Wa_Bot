@@ -8,7 +8,8 @@ const ownerGroup = groupInfo.owner || m.chat.split('-')[0] + '@s.whatsapp.net'
 if (user === ownerGroup || groupInfo.participants.some(p => p.id === user && p.admin))
 return conn.reply(m.chat, 'ꕥ El usuario mencionado ya tiene privilegios de administrador.', m)
 await conn.groupParticipantsUpdate(m.chat, [user], 'promote')
-await conn.reply(m.chat, `❀ Fue agregado como admin del grupo con exito.`, m)
+await m.react('✅')   
+  //await conn.reply(m.chat, `❀ Fue agregado como admin del grupo con exito.`, m)
 } catch (e) {
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
