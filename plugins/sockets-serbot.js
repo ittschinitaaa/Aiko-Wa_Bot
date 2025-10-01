@@ -7,7 +7,7 @@ import pino from 'pino';
 import chalk from 'chalk';
 import util from 'util';
 import * as ws from 'ws';
-import { child, spawn, exec } from 'child_process';
+import { spawn, exec } from 'child_process';
 import { makeWASocket } from '../lib/simple.js';
 import { fileURLToPath } from 'url';
 
