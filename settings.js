@@ -23,7 +23,7 @@ global.prems = []
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = "Baileys Multi Device"
-global.vs = "^1.0.0 | Latest"
+global.vs = "^2.0.0 | Latest"
 global.nameqr = "⏤͟͟͞͞𝙎𝙚𝙣𝙠𝙤-𝘽𝙤𝙩 🦊"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
@@ -33,9 +33,9 @@ global.yukiJadibts = true
 
 global.botname = "⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊"
 global.textbot = "sᥱᥒk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᴼᶠᴵᶜᴵᴬᴸ"
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᴼᶠᴵᶜᴵᴬᴸ"
-global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᴼᶠᴵᶜᴵᴬᴸ"
+global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
+global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
+global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
 global.currency = "¥enes"
 global.banner = "https://cdn.stellarwa.xyz/files/1758842352363.jpeg"
 global.icono = "https://cdn.stellarwa.xyz/files/1758842359325.jpeg"
