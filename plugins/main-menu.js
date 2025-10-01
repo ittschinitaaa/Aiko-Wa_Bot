@@ -175,7 +175,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ⸙ Ver el menú de comandos.
 ✦ *#creadora • #owner*
 > ⸙ Muestra el contactó de la creadora.
-✦ #staff • #colaboradores*
+✦ *#staff • #colaboradores*
 > ⸙ Muestra el equipo de staff zd la bot.
 ✦ *#sc • #script*
 > ⸙ Link del repositorio oficial del Bot.
@@ -226,7 +226,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 ✦ *#google*
 > ⸙ Realizar búsquedas por Google.
 ✦ *#horario*
->  ⸙ muestra el horarios de distintos paises.
+> ⸙ muestra el horarios de distintos paises.
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
 ╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *PROFILES* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
