@@ -14,7 +14,7 @@ import { makeWASocket } from '../lib/simple.js'
 import { fileURLToPath } from 'url'
 
 // Importa tu módulo de autobio (asegúrate de que la ruta sea correcta)
-import { iniciarAutobioSubBot } from './plugins/_autobio-subbot.js'
+import { iniciarAutobioSubBot } from './_autobio-subbot.js'
 
 let crm1 = "Y2QgcGx1Z2lucy"
 let crm2 = "A7IG1kNXN1b"
