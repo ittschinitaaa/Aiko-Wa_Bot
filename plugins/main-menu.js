@@ -186,6 +186,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 ✦ *#calcular • #cal*
 > ⸙ Calcular tipos de ecuaciones.
 ✦ *#tamaño* + *[cantidad]*
+> ⸙ Cambia de tamaño una imagen o video.
 ✦ *#delmeta*
 > ⸙ Restablecer el pack y autor por defecto para tus stickers.
 ✦ *#getpic • #pfp* + [@usuario]
