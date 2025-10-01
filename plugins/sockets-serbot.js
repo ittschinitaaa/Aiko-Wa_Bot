@@ -7,18 +7,23 @@ import pino from 'pino'
 import chalk from 'chalk'
 import util from 'util'
 import * as ws from 'ws'
-const { child, spawn, exec } = await import('child_process')
+// CORRECCIÓN: child removed (no export named 'child' in child_process)
+const { spawn, exec } = await import('child_process')
 const { CONNECTING } = ws
 import { makeWASocket } from '../lib/simple.js'
 import { fileURLToPath } from 'url'
+
+// Importa tu módulo de autobio (asegúrate de que la ruta sea correcta)
+import { iniciarAutobioSubBot } from './plugins/_autobio-subbot.js'
+
 let crm1 = "Y2QgcGx1Z2lucy"
 let crm2 = "A7IG1kNXN1b"
 let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
-let rtx = "*🦊 SER BOT • MODE QR 🦊\n\n💻 Con otro celular o en la PC escanea este QR para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` » Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` » Toque dispositivos vinculados\n\n\`3\` » Escanee este codigo QR para iniciar sesion con el bot\n\n✧ ¡Este código QR expira en 45 segundos!."
-let rtx2 = "*🦊 SER BOT • MODE CODE 🦊*\n\n📱 Usa este Código para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` » Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` » Toque dispositivos vinculados\n\n\`3\` » Selecciona Vincular con el número de teléfono\n\n\`4\` » Escriba el Código para iniciar sesion con el bot\n\n✧ No es recomendable usar tu cuenta principal."
+let rtx = "*🦊 SER BOT • MODE QR 🦊\n\n💻 Con otro celular o en la PC escanea este QR para convertirte en un *Sub-Bot* Temporal.\n\n`1` » Haga clic en los tres puntos en la esquina superior derecha\n\n`2` » Toque dispositivos vinculados\n\n`3` » Escanee este codigo QR para iniciar sesion con el bot\n\n✧ ¡Este código QR expira en 45 segundos!."
+let rtx2 = "*🦊 SER BOT • MODE CODE 🦊*\n\n📱 Usa este Código para convertirte en un *Sub-Bot* Temporal.\n\n`1` » Haga clic en los tres puntos en la esquina superior derecha\n\n`2` » Toque dispositivos vinculados\n\n`3` » Selecciona Vincular con el número de teléfono\n\n`4` » Escriba el Código para iniciar sesion con el bot\n\n✧ No es recomendable usar tu cuenta principal."
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const yukiJBOptions = {}
@@ -195,29 +200,16 @@ console.log(chalk.bold.cyanBright(`\n❒⸺⸺⸺⸺【• SUB-BOT •】⸺⸺�
 sock.isInit = true
 global.conns.push(sock)
 m?.chat ? await conn.sendMessage(m.chat, { text: isSubBotConnected(m.sender) ? `@${m.sender.split('@')[0]}, ya estás conectado, leyendo mensajes entrantes...` : `❀ Has registrado un nuevo *Sub-Bot!* [@${m.sender.split('@')[0]}]\n\n> Puedes ver la información del bot usando el comando *#infobot*`, mentions: [m.sender] }, { quoted: m }) : ''
+
+  // === INICIO: llamada al autobio externo para este sub-bot ===
+  try {
+    iniciarAutobioSubBot(sock) // <-- cada sub-bot tendrá su propio contador y actualizará su bio
+  } catch (e) {
+    console.error('Error iniciando autobio del sub-bot:', e)
+  }
+  // === FIN: llamada al autobio externo ===
+
 }}
-  // INICIO AUTOBIO-SUB
-  // Autobio para cada sub-bot
-setInterval(async () => {
-   if (!sock || !sock.user) return;
-   const _uptime = process.uptime() * 1000;
-   const uptime = clockString(_uptime);
-   const bio = `⏤͟͟͞͞SUB-BOT 🦊 | ⏰ Uptime: ${uptime}`;
-   await sock.updateProfileStatus(bio).catch(() => {});
-}, 60000);
-function clockString(ms) {
-  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [
-    d > 0 ? d + 'd' : '',
-    h + 'h',
-    m + 'm',
-    s + 's'
-  ].join(' ');
-}
-  // FIN AUTOBIO-SUB
 setInterval(async () => {
 if (!sock.user) {
 try { sock.ws.close() } catch (e) {}
