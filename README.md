@@ -123,14 +123,6 @@ cd && cd Senko-Bot && nano settings.js
 ### **`➮ Enlaces útiles`**
 
 <details>
-<summary><b> 🜸 Enlaces Oficiales </b></summary>
-
- * Canal Oficial  [`¡Click aquí!`](https://whatsapp.com/channel/0029Vb64nWqLo4hb8cuxe23n)
-* Grupo Oficial [`¡Click aquí!`](https://chat.whatsapp.com/HaKf6ezcwdbGzmH782eBal)
-* Comunidad Oficial [`¡Click aquí!`](https://chat.whatsapp.com/BgIcqDiiTEmL5ChFpq76y0?mode=ems_copy_t)
-</details>
-
-<details>
 <summary><b> ✰ Contáctos</b></summary>
 
 * WhatsApp: [`Aquí`](https://wa.me/573243768166)
