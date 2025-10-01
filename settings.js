@@ -32,7 +32,7 @@ global.yukiJadibts = true
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.botname = "⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊"
-global.textbot = "sᥱᥒk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ"
+global.textbot = "sᥱᥒk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
 global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
 global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
