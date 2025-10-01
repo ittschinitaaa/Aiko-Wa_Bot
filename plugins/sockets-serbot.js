@@ -195,7 +195,23 @@ console.log(chalk.bold.cyanBright(`\n❒⸺⸺⸺⸺【• SUB-BOT •】⸺⸺�
 sock.isInit = true
 global.conns.push(sock)
 m?.chat ? await conn.sendMessage(m.chat, { text: isSubBotConnected(m.sender) ? `@${m.sender.split('@')[0]}, ya estás conectado, leyendo mensajes entrantes...` : `❀ Has registrado un nuevo *Sub-Bot!* [@${m.sender.split('@')[0]}]\n\n> Puedes ver la información del bot usando el comando *#infobot*`, mentions: [m.sender] }, { quoted: m }) : ''
-}}
+};
+  // INICIO AUTOBIO-SUB
+  setInterval(async () => {
+  if (stopped === 'close' || !conn || !conn?.user) return;
+  const _uptime = process.uptime() * 1000;
+  const uptime = clockString(_uptime);
+  const bio = `⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊|⏰ 𝖀𝖕𝖙𝖎𝖒𝖊 : ${uptime}`;
+  await conn?.updateProfileStatus(bio).catch((_) => _);
+}, 60000);
+function clockString(ms) {
+  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
+  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
+  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
+  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
+  return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
+  }
+  // FIN AUTOBIO-SUB
 setInterval(async () => {
 if (!sock.user) {
 try { sock.ws.close() } catch (e) {}
