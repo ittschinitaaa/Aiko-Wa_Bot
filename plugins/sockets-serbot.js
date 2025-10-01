@@ -197,20 +197,26 @@ global.conns.push(sock)
 m?.chat ? await conn.sendMessage(m.chat, { text: isSubBotConnected(m.sender) ? `@${m.sender.split('@')[0]}, ya estás conectado, leyendo mensajes entrantes...` : `❀ Has registrado un nuevo *Sub-Bot!* [@${m.sender.split('@')[0]}]\n\n> Puedes ver la información del bot usando el comando *#infobot*`, mentions: [m.sender] }, { quoted: m }) : ''
 }}
   // INICIO AUTOBIO-SUB
-  setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn?.user) return;
-  const _uptime = process.uptime() * 1000;
-  const uptime = clockString(_uptime);
-  const bio = `⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊|⏰ 𝖀𝖕𝖙𝖎𝖒𝖊 : ${uptime}`;
-  await conn?.updateProfileStatus(bio).catch((_) => _);
+  // Autobio para cada sub-bot
+setInterval(async () => {
+   if (!sock || !sock.user) return;
+   const _uptime = process.uptime() * 1000;
+   const uptime = clockString(_uptime);
+   const bio = `⏤͟͟͞͞SUB-BOT 🦊 | ⏰ Uptime: ${uptime}`;
+   await sock.updateProfileStatus(bio).catch(() => {});
 }, 60000);
 function clockString(ms) {
-  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
-  }
+  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
+  return [
+    d > 0 ? d + 'd' : '',
+    h + 'h',
+    m + 'm',
+    s + 's'
+  ].join(' ');
+}
   // FIN AUTOBIO-SUB
 setInterval(async () => {
 if (!sock.user) {
