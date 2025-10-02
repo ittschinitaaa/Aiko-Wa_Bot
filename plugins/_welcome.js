@@ -1,4 +1,4 @@
-import fs from 'fs'
+/*import fs from 'fs'
 import { WAMessageStubType } from '@whiskeysockets/baileys'
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
@@ -44,3 +44,4 @@ try { fs.unlinkSync(img) } catch {}
 export { generarBienvenida, generarDespedida }
 export default handler
 
+*/
