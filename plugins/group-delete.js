@@ -10,6 +10,7 @@ delete: { remoteJid: m.chat, fromMe: false, id: stanzaId, participant: participa
 } catch {
 return conn.sendMessage(m.chat, { delete: m.quoted.key })
 }}
+await m.react('✅')   
 
 handler.help = ['delete']
 handler.tags = ['grupo']
