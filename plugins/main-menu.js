@@ -11,7 +11,7 @@ let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮  
 > ❀ Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aquí tienes la lista de comandos.
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
-│✦ *Tipo* » ${(conn.user.jid == global.conn.user.jid ? '𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋' : '𝐒𝐔𝐁-𝐁𝐎𝐓')}
+│✦ *Tipo* » ${(conn.user.jid == global.conn.user.jid ? 'Principal 👑' : 'Sub-Bot 🦊')}
 │⚘ *Versión* » ${vs}
 │ꕥ *Plugins* » ${totalCommands}
 │🜸 *Librería* » ${libreria}
