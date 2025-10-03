@@ -133,6 +133,8 @@ const setting = global.db.data.settings[conn?.user?.jid]
 const isROwner = [...global.owner.map((number) => number)].map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
 const isOwner = isROwner || m.fromMe
 const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender) || user.premium == true
+// 🔧 Definición de moderadores
+const isMods = isOwner || (global.mods ? global.mods.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender) : false)
 
 if (opts["nyimak"])  return
 if (!m.fromMe && setting["self"]) return
@@ -205,6 +207,7 @@ userGroup,
 botGroup,
 isROwner,
 isOwner,
+isMods,
 isRAdmin,
 isAdmin,
 isBotAdmin,
@@ -320,6 +323,7 @@ userGroup,
 botGroup,
 isROwner,
 isOwner,
+isMods,
 isRAdmin,
 isAdmin,
 isBotAdmin,
