@@ -3,7 +3,7 @@ import { WAMessageStubType } from '@whiskeysockets/baileys'
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
 const username = `@${userId.split('@')[0]}`
-const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/rq6lzs.jpg')
+const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/swwwag.jpg')
 const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Argentina/Buenos_Aires", day: 'numeric', month: 'long', year: 'numeric' })
 const groupSize = groupMetadata.participants.length + 1
 const desc = groupMetadata.desc?.toString() || 'Sin descripción'
