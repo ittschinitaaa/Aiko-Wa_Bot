@@ -133,5 +133,5 @@ cd && cd Senko-Bot && nano settings.js
 
 ### **`ᥫ👑 Propietaria`**
 <a
-href="https://github.com/ittschinitaaa"><img src="https://github.com/ittschinitaaa.png" width="130" height="130" alt="
+href="https://github.com/ittschinitaaa"><img src="https://github.com/ittschinitaaa.jpg" width="130" height="130" alt="
 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ"/></a>
