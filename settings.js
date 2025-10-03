@@ -20,7 +20,7 @@ global.owner = [
 
 global.suittag = ["923297474483"] 
 global.prems = ["923297474483"]
-
+global.mods = ["5492644996684"]
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = "Baileys Multi Device"
