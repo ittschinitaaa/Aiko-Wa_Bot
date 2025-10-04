@@ -47,7 +47,7 @@ if (!("premium" in user)) user.premium = false
 if (!user.premium) user.premiumTime = 0
 if (!("banned" in user)) user.banned = false
 if (!("bannedReason" in user)) user.bannedReason = ""
-if (!("commands" in user)) user.commands = 0
+if (!isNumber(user.commands)) user.commands = 0
 if (!isNumber(user.afk)) user.afk = -1
 if (!("afkReason" in user)) user.afkReason = ""
 if (!isNumber(user.warn)) user.warn = 0
@@ -101,7 +101,8 @@ economy: true,
 gacha: true
 }
 var settings = global.db.data.settings[this.user.jid]
-if (typeof settings !== "object") global.db.data.settings[this.user.jid] = {}
+if (typeof settings !== "object") 
+global.db.data.settings[this.user.jid] = {}
 if (settings) {
 if (!("self" in settings)) settings.self = false
 if (!("restrict" in settings)) settings.restrict = true
@@ -129,16 +130,17 @@ const chat = global.db.data.chats[m.chat]
 const conn = m.conn || global.conn
 const setting = global.db.data.settings[conn?.user?.jid]
   
-const isROwner = [...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
+const isROwner = [...global.owner.map((number) => number)].map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
 const isOwner = isROwner || m.fromMe
-const isMods = isROwner || global.mods.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
 const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender) || user.premium == true
+// 🔧 Definición de moderadores
+const isMods = isOwner || (global.mods ? global.mods.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender) : false)
 
 if (opts["nyimak"])  return
-if (!m.fromMe && !isMods && setting["self"]) return
-if (!m.fromMe && !isMods && setting["gponly"] && !m.chat.endsWith("g.us") && !/code|p|ping|qr|estado|status|infobot|botinfo|report|reportar|invite|join|logout|suggest|help|menu/gim.test(m.text)) return
+if (!m.fromMe && setting["self"]) return
+if (!m.fromMe && setting["gponly"] && !m.chat.endsWith("g.us") && !/code|p|ping|qr|estado|status|infobot|botinfo|report|reportar|invite|join|logout|suggest|help|menu/gim.test(m.text)) return
 if (opts["swonly"] && m.chat !== "status@broadcast") return
-if (opts["queque"] && m.text && !(isMods || isPrems)) {
+if (opts["queque"] && m.text && !(isPrems)) {
 const queque = this.msgqueque, time = 1000 * 5
 const previousID = queque[queque.length - 1]
 queque.push(m.id || m.key.id)
@@ -255,6 +257,7 @@ throw !1
 
 if (!isAccept) continue
 m.plugin = name
+if (isAccept) { global.db.data.users[m.sender].commands = (global.db.data.users[m.sender].commands || 0) + 1 }
 if (chat) {
 const botId = this.user.jid
 const primaryBotId = chat.primaryBot
@@ -283,10 +286,6 @@ continue
 }
 if (plugin.owner && !isOwner) {
 fail("owner", m, this)
-continue
-}
-if (plugin.mods && !isMods) {
-fail("mods", m, this)
 continue
 }
 if (plugin.premium && !isPrems) {
@@ -347,9 +346,7 @@ try {
 await plugin.after.call(this, m, extra)
 } catch (err) {
 console.error(err)
-}} 
-if (isAccept) { global.db.data.users[m.sender].commands = (global.db.data.users[m.sender].commands || 0) + 1 }
-}}}} catch (err) {
+}}}}}} catch (err) {
 console.error(err)
 } finally {
 if (opts["queque"] && m.text) {
@@ -388,4 +385,3 @@ watchFile(file, async () => {
 unwatchFile(file)
 console.log(chalk.magenta("Se actualizo 'handler.js'"))
 })
-
