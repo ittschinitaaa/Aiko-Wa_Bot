@@ -10,7 +10,8 @@ if (user === conn.user.jid) return conn.reply(m.chat, `ꕥ No puedes degradar al
 if (user === ownerGroup) return conn.reply(m.chat, `ꕥ No puedes degradar al creador del grupo.`, m)
 if (user === ownerBot) return conn.reply(m.chat, `ꕥ No puedes degradar al propietario del bot.`, m)
 await conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-conn.reply(m.chat, `❀ Fue descartado como admin.`, m)
+await m.react('✅')
+  //conn.reply(m.chat, `❀ Fue descartado como admin.`, m)
 } catch (e) {
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
