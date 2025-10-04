@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix, command, args }) => {
   let chat = global.db.data.chats[m.chat]
-  let botname = global.botname || "SENKO-BOT 🦊" // <- Definimos el nombre del bot
+  let botname = global.botname || " ⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊" // <- Definimos el nombre del bot
 
   if (command === 'bot') {
     if (args.length === 0) {
