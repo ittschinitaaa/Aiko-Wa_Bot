@@ -39,7 +39,7 @@ export async function before(m, { groupMetadata }) {
  ׄ 🦊 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* ${usedPrefix}${command}
  ׄ 🍁 ׅ り *𝐕𝐢𝐬𝐢𝐭𝐚 ›* instagram.com/its.chinitaaa_
  ׄ 🦊 ׅ り *𝐁𝐨𝐭 ›* ${botname}
- ׄ 🍁 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ^2.0.0`;
+ ׄ 🍁 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ${version}`;
 
     let ppch = await this.profilePictureUrl(m.sender, 'image').catch(_ => "https://cdn.stellarwa.xyz/files/1758842359325.jpeg");
 
@@ -59,42 +59,13 @@ export async function before(m, { groupMetadata }) {
     }, { quoted: null });
 
   } catch (e) {
-    console.log(`[ 🐼 Error ] No se pudo enviar el mensaje al canal.\n${e}`);
+    console.log(`[ ❌ Error ] No se pudo enviar el mensaje al canal.\n${e}`);
   }
 
-  // 🪄 Verificar si el comando existe o no
   if (validCommand(command, globalThis.plugins)) {
-    // comando válido → ya se notificó arriba
+  
   } else {
     const comando = command;
     await m.reply(`✿ El comando *${comando}* no existe.\n> Usa *${usedPrefix}help* para ver la lista de comandos disponibles.`);
   }
       }
-
-/*export async function before(m, { groupMetadata }) {
-if (!m.text || !global.prefix.test(m.text)) return
-const usedPrefix = global.prefix.exec(m.text)[0]
-const command = m.text.slice(usedPrefix.length).trim().split(' ')[0].toLowerCase()
-if (!command || command.length === 0) return
-const validCommand = (command, plugins) => {
-for (let plugin of Object.values(plugins)) {
-if (plugin.command && (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)) {
-return true
-}}
-return false
-}
-let chat = global.db.data.chats[m.chat]
-let settings = global.db.data.settings[this.user.jid]
-let owner = [...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
-if (chat.modoadmin) return
-if (settings.self) return
-if (command === 'mute') return
-if (chat.isMute && !owner) return
-if (command === 'bot') return
-if (chat.isBanned && !owner) return
-if (validCommand(command, global.plugins)) {
-} else {
-const comando = command
-await m.reply(`ꕥ El comando *<${comando}>* no existe.\n> Usa *${usedPrefix}help* para ver la lista de comandos disponibles.`)
-}}
-*/
