@@ -34,7 +34,7 @@ export async function before(m, { groupMetadata }) {
 
   try {
     // 📋 Texto de la notificación
-    let chtxt = ` ֯　ׅ🦊ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName || "Desconocido"}
+    let chtxt = ` ֯　ׅ👤ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName || "Desconocido"}
 
  ׄ 🦊 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* ${usedPrefix}${command}
  ׄ 🍁 ׅ り *𝐕𝐢𝐬𝐢𝐭𝐚 ›* instagram.com/its.chinitaaa_
