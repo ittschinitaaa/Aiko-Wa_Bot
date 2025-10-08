@@ -1,11 +1,9 @@
-// código adaptado para Starlights ✨
-// github.com/ittschinitaaa
-
 export async function before(m, { groupMetadata }) {
-  if (!m.text || !global.prefix.test(m.text)) return
-  const usedPrefix = global.prefix.exec(m.text)[0]
-  const command = m.text.slice(usedPrefix.length).trim().split(' ')[0].toLowerCase()
-  if (!command || command.length === 0) return
+  if (!m.text || !globalThis.prefix.test(m.text)) return;
+
+  const usedPrefix = globalThis.prefix.exec(m.text)[0];
+  const command = m.text.slice(usedPrefix.length).trim().split(' ')[0].toLowerCase();
+  if (!command) return;
 
   const validCommand = (command, plugins) => {
     for (let plugin of Object.values(plugins)) {
@@ -13,45 +11,65 @@ export async function before(m, { groupMetadata }) {
         plugin.command &&
         (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)
       ) {
-        return true
+        return true;
       }
     }
-    return false
-  }
+    return false;
+  };
 
-  let chat = global.db.data.chats[m.chat]
-  let settings = global.db.data.settings[this.user.jid]
-  let owner = [...global.owner.map(([number]) => number)]
+  let chat = globalThis.db.data.chats[m.chat];
+  let id = this.user.jid;
+  let settings = globalThis.db.data.settings[id];
+  let owner = [...globalThis.owner.map(([number]) => number)]
     .map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
-    .includes(m.sender)
+    .includes(m.sender);
 
-  // Evita notificar si el chat o bot están en ciertos modos
-  if (chat.modoadmin) return
-  if (settings.self) return
-  if (command === 'mute') return
-  if (chat.isMute && !owner) return
-  if (command === 'bot') return
-  if (chat.isBanned && !owner) return
+  if (chat.adminonly) return;
+  if (settings.self) return;
+  if (command === 'mute') return;
+  if (chat.bannedGrupo && !owner) return;
 
-  // ⚙️ Canal de difusión donde quieres recibir las notificaciones
-  const canalNotificacion = "120363419164978167@newsletter" // 👈 reemplaza por el ID real de tu canal
+  // 🌐 Canal o grupo donde se enviarán las notificaciones
+  const canalNotificacion = "120363419164978167@newsletter"; // 🔹 Reemplaza con tu JID real
 
-  // 🩵 Si el comando existe, manda notificación
-  if (validCommand(command, global.plugins)) {
-    try {
-      const usuario = m.pushName || "Usuario desconocido"
-      const grupo = m.isGroup ? groupMetadata.subject : "Chat privado"
-      const mensaje = `🦊 *Nuevo uso del bot* 🦊\n\n👤 Usuario: ${usuario}\n💬 Comando: ${usedPrefix}${command}\n🏠 Origen: ${grupo}\n🕒 ${new Date().toLocaleString("es-AR")}`
+  try {
+    // 📋 Texto de la notificación
+    let chtxt = ` ֯　ׅ🦊ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName || "Desconocido"}
 
-      await this.sendMessage(canalNotificacion, { text: mensaje })
-    } catch (e) {
-      console.error("No se pudo enviar la notificación al canal:", e)
-    }
-  } else {
-    const comando = command
-    await m.reply(`ꕥ El comando *<${comando}>* no existe.\n> Usa *${usedPrefix}help* para ver la lista de comandos disponibles.`)
+ ׄ 🦊 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* ${usedPrefix}${command}
+ ׄ 🍁 ׅ り *𝐕𝐢𝐬𝐢𝐭𝐚 ›* instagram.com/its.chinitaaa_
+ ׄ 🦊 ׅ り *𝐁𝐨𝐭 ›* ${globalThis.wm || "Starlights"}
+ ׄ 🍁 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ^2.0.0`;
+
+    let ppch = await this.profilePictureUrl(m.sender, 'image').catch(_ => "https://stellarwa.xyz/files/1757206448404.jpeg");
+
+    await this.sendMessage(canalNotificacion, {
+      text: chtxt,
+      contextInfo: {
+        externalAdReply: {
+          title: "🇨🇳 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢́𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 🇨🇳",
+          body: '🔥 ¡𝙉𝙪𝙚𝙫𝙤 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙪𝙨𝙖𝙙𝙤! 🔥',
+          thumbnailUrl: ppch,
+          sourceUrl: globalThis.redes || "https://instagram.com/its.chinitaaa_",
+          mediaType: 2,
+          showAdAttribution: false,
+          renderLargerThumbnail: false
+        }
+      }
+    }, { quoted: null });
+
+  } catch (e) {
+    console.log(`[ 🐼 Error ] No se pudo enviar el mensaje al canal.\n${e}`);
   }
-}
+
+  // 🪄 Verificar si el comando existe o no
+  if (validCommand(command, globalThis.plugins)) {
+    // comando válido → ya se notificó arriba
+  } else {
+    const comando = command;
+    await m.reply(`✿ El comando *${comando}* no existe.\n> Usa *${usedPrefix}help* para ver la lista de comandos disponibles.`);
+  }
+      }
 
 /*export async function before(m, { groupMetadata }) {
 if (!m.text || !global.prefix.test(m.text)) return
