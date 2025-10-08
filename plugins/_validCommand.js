@@ -39,7 +39,7 @@ export async function before(m, { groupMetadata }) {
  ׄ 🦊 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* ${usedPrefix}${command}
  ׄ 🍁 ׅ り *𝐕𝐢𝐬𝐢𝐭𝐚 ›* instagram.com/its.chinitaaa_
  ׄ 🦊 ׅ り *𝐁𝐨𝐭 ›* ${botname}
- ׄ 🍁 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ${version}`;
+ ׄ 🍁 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ${vs}`;
 
     let ppch = await this.profilePictureUrl(m.sender, 'image').catch(_ => "https://cdn.stellarwa.xyz/files/1758842359325.jpeg");
 
