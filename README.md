@@ -23,6 +23,22 @@ Extensiones adicionales
 </details>
 
 ---
+### **`★ 𝗝𝗦𝗖𝗹𝗼𝘂𝗱 ★`**
+
+<a
+href="https://dash.twb.qzz.io/"><img src="https://files.catbox.moe/ghvr2l.jpg" height="150px"></a>
+
+<details>
+ <summary><b> ❒ Servidor JSCloud</b></summary>
+
+* Dashboard : [`Dash`](https://dash.twb.qzz.io/)
+* Canal de WhatsApp : [`Canal`](https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R)
+* Comunidad : [`Aquí`](https://chat.whatsapp.com/HKgiZrthylTJ9C9VMdCLS7)
+* Contacto : [`Maycol`](https://wa.me/51921826291)
+
+</details>
+
+---
 
 ### **`📌 Click en la imagen para descargar termux`**
 <a
