@@ -131,7 +131,7 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 ```bash
 cd && cd Senko-Bot && nano settings.js
 ```
-#### Para que no pierda su progreso en YukiBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
+#### Para que no pierda su progreso en Senko-abot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 > *Estos comandos solo funcionan para TERMUX, REPLIT, LINUX*
 </details>
 
@@ -146,4 +146,10 @@ cd && cd Senko-Bot && nano settings.js
 </details>
 
 ---
-**`mᥲძᥱ ᑲᥡ і𝗍𝗍sᥴһіᥒі𝗍ᥲᥲᥲ`**
+
+
+### **`⏤͟͟͞͞Propietaria ★`**
+<a
+href="https://github.com/ittschinitaaa"><img src="https://github.com/ittschinitaaa.png" width="130" height="130" alt="
+𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ"/></a>
+
