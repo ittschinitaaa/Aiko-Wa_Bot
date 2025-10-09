@@ -34,9 +34,9 @@ global.yukiJadibts = true
 
 global.botname = "⏤͟͟͞͞𝐒𝔼𝐍𝕂𝐎 - 𝔹𝐎𝕋 🦊"
 global.textbot = "sᥱᥒk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
-global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᴼᶠᴵᶜᴵᴬᴸ"
+global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
+global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
+global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.currency = "¥enes"
 global.banner = "https://files.catbox.moe/y91sxx.jpg"
 global.icono = "https://cdn.stellarwa.xyz/files/1758842359325.jpeg"
