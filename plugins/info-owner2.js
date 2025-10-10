@@ -18,7 +18,7 @@ Cualquier duda, sugerencia o reporte, podés contactarla 💖
 `
 
   await conn.sendMessage(m.chat, {
-    image: { url: 'https://telegra.ph/file/8a3f6c5f5e08a52b7f265.jpg' }, // Imagen representativa
+    image: { url: 'https://files.catbox.moe/swwwag.jpg' }, // Imagen representativa
     caption: texto,
     footer: 'Senko-Bot 💫 by Chinita',
     templateButtons: [
