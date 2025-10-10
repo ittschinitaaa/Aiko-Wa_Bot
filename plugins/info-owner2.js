@@ -17,16 +17,18 @@ var handler = async (m, { conn }) => {
 Cualquier duda, sugerencia o reporte, podés contactarla 💖
 `
 
+  const templateButtons = [
+    { urlButton: { displayText: '💻 GitHub Oficial', url: github } },
+    { urlButton: { displayText: '📷 Instagram', url: instagram } },
+    { quickReplyButton: { displayText: '🌸 Menú Principal', id: '.menu' } },
+    { quickReplyButton: { displayText: '📩 Reportar un error', id: '.report' } }
+  ]
+
   await conn.sendMessage(m.chat, {
-    image: { url: 'https://files.catbox.moe/swwwag.jpg' }, // Imagen representativa
+    image: { url: 'https://files.catbox.moe/swwwag.jpg' },
     caption: texto,
     footer: 'Senko-Bot 💫 by Chinita',
-    templateButtons: [
-      { index: 1, urlButton: { displayText: '💻 GitHub Oficial', url: github } },
-      { index: 2, urlButton: { displayText: '📷 Instagram', url: instagram } },
-      { index: 3, quickReplyButton: { displayText: '🌸 Menú Principal', id: '.menu' } },
-      { index: 4, quickReplyButton: { displayText: '📩 Reportar un error', id: '.report' } }
-    ],
+    templateButtons,
     headerType: 4
   }, { quoted: m })
 }
