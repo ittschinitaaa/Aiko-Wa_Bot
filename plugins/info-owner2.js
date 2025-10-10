@@ -18,14 +18,14 @@ Cualquier duda, sugerencia o reporte, podés contactarla 💖
 `
 
   await conn.sendMessage(m.chat, {
-    image: { url: 'https://files.catbox.moe/swwwag.jpg' }, // Imagen representativa
+    image: { url: 'https://telegra.ph/file/8a3f6c5f5e08a52b7f265.jpg' }, // Imagen representativa
     caption: texto,
     footer: 'Senko-Bot 💫 by Chinita',
-    buttons: [
-      { buttonId: `.menu`, buttonText: { displayText: '🌸 Menú Principal' }, type: 1 },
-      { buttonId: `.report`, buttonText: { displayText: '📩 Reportar un error' }, type: 1 },
-      { buttonId: `https://github.com/ittschinitaaa/Senko-Bot`, buttonText: { displayText: '💻 GitHub Oficial' }, type: 1 },
-      { buttonId: `${instagram}`, buttonText: { displayText: '📷 Instagram' }, type: 1 }
+    templateButtons: [
+      { index: 1, urlButton: { displayText: '💻 GitHub Oficial', url: github } },
+      { index: 2, urlButton: { displayText: '📷 Instagram', url: instagram } },
+      { index: 3, quickReplyButton: { displayText: '🌸 Menú Principal', id: '.menu' } },
+      { index: 4, quickReplyButton: { displayText: '📩 Reportar un error', id: '.report' } }
     ],
     headerType: 4
   }, { quoted: m })
