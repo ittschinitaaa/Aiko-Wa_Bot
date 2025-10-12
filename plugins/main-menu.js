@@ -8,10 +8,10 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 await m.react('🦇')   
 let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶
-> ❀ Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aquí tienes la lista de comandos.
+> 🌷 Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aquí tienes la lista de comandos.
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
-│✦ *Tipo* » ${(conn.user.jid == global.conn.user.jid ? 'Principal 👑' : 'Sub-Bot 🦊')}
+│✦ *Tipo* » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ' : '𝗦ᥙᑲ-ᑲ᥆𝗍')}
 │⚘ *Versión* » ${vs}
 │ꕥ *Plugins* » ${totalCommands}
 │🜸 *Librería* » ${libreria}
