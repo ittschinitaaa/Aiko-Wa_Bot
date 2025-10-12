@@ -17,7 +17,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/ittschinitaaa/Draculaura-MD && cd Draculaura-MD
+git clone https://github.com/ittschinitaaa/Aiko-Bot && cd Aiko-Bot
 ```
 ```bash
 yarn install
@@ -34,7 +34,7 @@ npm start
 <details>
   <summary><b>⏰ Comandos para mantener más tiempo activo el Bot</b></summary>
 
-> *Ejecutar estos comandos dentro de la carpeta Draculaura-MD*
+> *Ejecutar estos comandos dentro de la carpeta Aiko-Bot*
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ``` 
@@ -59,38 +59,38 @@ pm2 start index
 ### En caso de detenerse
 > _Si despues que ya instalastes el bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos:_
 ```bash
-cd && cd Draculaura-MD && npm start
+cd && cd Aiko-Bot && npm start
 ```
 ----
 ### Obtener nuevo código QR 
-> *Detén el bot, haz click en el símbolo (ctrl) [default=z] usar la letra "z" + "ENTER" hasta que salga algo verdes similar a: `Senko-Bot $`*
+> *Detén el bot, haz click en el símbolo (ctrl) [default=z] usar la letra "z" + "ENTER" hasta que salga algo verdes similar a: `Aiko-Bot $`*
 > **Escribe los siguientes comandos uno x uno :**
 ```bash 
-cd && cd Draculaura-MD && rm -rf sessions/Principal && npm run qr
+cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run qr
 ```
 ----
 ### Obtener nuevo código de teléfono 
 ```bash 
-cd && cd Draculaura-MD && rm -rf sessions/Principal && npm run code
+cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run code
 ```
 </details>
 
 <details>
-  <summary><b>💻 Actualizar Draculaura</b></summary>
+  <summary><b>💻 Actualizar Aiko-Bot</b></summary>
 
-> **Utiliza esta opción únicamente si deseas actualizar a la última versión de Draculaura. Hemos implementado un método ingenioso mediante comandos para realizar la actualización, pero ten en cuenta que al usarla se eliminarán todos los archivos de la versión actual y se reemplazarán con los de la nueva versión. Solo se conservará la base de datos, por lo que será necesario volver a vincular el Bot**  
+> **Utiliza esta opción únicamente si deseas actualizar a la última versión de Aiko. Hemos implementado un método ingenioso mediante comandos para realizar la actualización, pero ten en cuenta que al usarla se eliminarán todos los archivos de la versión actual y se reemplazarán con los de la nueva versión. Solo se conservará la base de datos, por lo que será necesario volver a vincular el Bot**  
 
 **Comandos para actualizar Senko-Bot de forma automática**
 
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Draculaura-MD/master/termux.sh | bash 
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Aiko-Bot/master/termux.sh | bash 
 ```
 **👑 Volverte owner del Bot**
 
 *Si después de instalar el bot e iniciar la sesión (deseas poner tu número es la lista de owner pon este comando:*
 
 ```bash
-cd && cd Draculaura-MD && nano settings.js
+cd && cd Aiko-Bot && nano settings.js
 ```
 #### Para que no pierda su progreso en Senko-abot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 > *Estos comandos solo funcionan para TERMUX, REPLIT, LINUX*
