@@ -1,5 +1,5 @@
 {
-"name": "Senko-bot",
+"name": "Draculaura",
 "version": "1.0.0",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -13,7 +13,7 @@
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/The-King-Destroy/YukiBot-MD.git"
+"url": "git+https://github.com/ittschinitaaa/Draculaura.git"
 },  
 "author": "The-King-Destroy",
 "license": "MIT-License",
