@@ -333,15 +333,15 @@ console.log(m.message)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: `『✦』El comando *${comando}* solo puede ser usado por los creadores del bot.`, 
-owner: `『✦』El comando *${comando}* solo puede ser usado por los desarrolladores del bot.`, 
-mods: `『✦』El comando *${comando}* solo puede ser usado por los moderadores del bot.`, 
-premium: `『✦』El comando *${comando}* solo puede ser usado por los usuarios premium.`, 
-group: `『✦』El comando *${comando}* solo puede ser usado en grupos.`,
-private: `『✦』El comando *${comando}* solo puede ser usado al chat privado del bot.`,
-admin: `『✦』El comando *${comando}* solo puede ser usado por los administradores del grupo.`, 
-botAdmin: `『✦』Para ejecutar el comando *${comando}* debo ser administrador del grupo.`,
-restrict: `『✦』Esta caracteristica está desactivada.`
+rowner: `『🌷』El comando *${comando}* solo puede ser usado por los creadores del bot.`, 
+owner: `『🌸』El comando *${comando}* solo puede ser usado por los desarrolladores del bot.`, 
+mods: `『🌼』El comando *${comando}* solo puede ser usado por los moderadores del bot.`, 
+premium: `『🌻』El comando *${comando}* solo puede ser usado por los usuarios premium.`, 
+group: `『🌹』El comando *${comando}* solo puede ser usado en grupos.`,
+private: `『💐』El comando *${comando}* solo puede ser usado al chat privado del bot.`,
+admin: `『🍁』El comando *${comando}* solo puede ser usado por los administradores del grupo.`, 
+botAdmin: `『🌱』Para ejecutar el comando *${comando}* debo ser administrador del grupo.`,
+restrict: `『☘️』Esta caracteristica está desactivada.`
 }[type]
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
 }
