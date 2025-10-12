@@ -48,12 +48,8 @@ ${description}
 🎖 Nivel » *${nivel}*
 🏅 Puesto » *#${rank}*
 🎖 Progreso » *${progreso}*
-💎 Premium » ${premium ? `✅ (*${isLeft}*)` : '❌'}
-
-ꕥ Harem » *${haremCount}*
-♤ Valor total » *${haremValue.toLocaleString()}*${favLine}
-🪙 Coins totales » *${total.toLocaleString()} ${currency}*
-✨ Comandos totales » *${user.commands || 0}*`
+💎 Premium » ${premium ? `✅ (*${isLeft}*)` : '❌'}`
+  
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: text, mentions: [userId] }, { quoted: fkontak })
 } catch (error) {
 await m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
