@@ -135,7 +135,7 @@ cd && cd Aiko-Bot && nano settings.js
 ---
 
 
-### **`⏤͟͟͞͞Propietaria ★`**
+### **`𝐏𝐑𝐎𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐀`**
 <a
 href="https://github.com/ittschinitaaa"><img src="https://github.com/ittschinitaaa.png" width="130" height="130" alt="
 𝑪𝑯𝑰𝑵𝑰𝑻𝑨|ᵒᶠᶦᶜᶦᵃˡ"/></a>
