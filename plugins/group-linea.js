@@ -15,7 +15,7 @@ return 0
 })
 const listaEnLinea =
 participantesOrdenados
-.map((k) => `*●* @${k.split("@")[0]}`)
+.map((k) => `*🪼* @${k.split("@")[0]}`)
 .join("\n") || "ꕥ No hay usuarios en línea en este momento."
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: `*❀ Lista de usuarios en línea:*\n\n${listaEnLinea}\n\n> ${dev}`, contextInfo: { mentionedJid: participantesOrdenados }}, { quoted: m })
 } catch (error) {
