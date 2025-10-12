@@ -3,12 +3,12 @@ import { WAMessageStubType } from '@whiskeysockets/baileys'
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
 const username = `@${userId.split('@')[0]}`
-const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/swwwag.jpg')
+const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/bp1qfw.png')
 const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Argentina/Buenos_Aires", day: 'numeric', month: 'long', year: 'numeric' })
 const groupSize = groupMetadata.participants.length + 1
 const desc = groupMetadata.desc?.toString() || 'Sin descripción'
 const mensaje = (chat.sWelcome || 'Edita con el comando *"#setwelcome"*').replace(/{usuario}/g, `${username}`).replace(/{grupo}/g, `*${groupMetadata.subject}*`).replace(/{desc}/g, `${desc}`)
-const caption = `🦊 Bienvenido a *"_${groupMetadata.subject}_"*\n👤 _Usuario_ » ${username}\n✰ ${mensaje}\n★ _Ahora somos ${groupSize} Miembros._\nꕥ Fecha » ${fecha}\n૮꒰ ˶• ᴗ •˶꒱ა Disfruta tu estadía en el grupo!\n> *➮ Puedes usar _#help_ para ver la lista de comandos.*`
+const caption = `🪻 Bienvenido a *"_${groupMetadata.subject}_"*\n👤 _Usuario_ » ${username}\n✰ ${mensaje}\n★ _Ahora somos ${groupSize} Miembros._\nꕥ Fecha » ${fecha}\n૮꒰ ˶• ᴗ •˶꒱ა Disfruta tu estadía en el grupo!\n> *➮ Puedes usar _#help_ para ver la lista de comandos.*`
 return { pp, caption, mentions: [userId] }
 }
 async function generarDespedida({ conn, userId, groupMetadata, chat }) {
@@ -18,7 +18,7 @@ const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Argent
 const groupSize = groupMetadata.participants.length - 1
 const desc = groupMetadata.desc?.toString() || 'Sin descripción'
 const mensaje = (chat.sBye || 'Edita con el comando *"#setbye"*').replace(/{usuario}/g, `${username}`).replace(/{grupo}/g, `${groupMetadata.subject}`).replace(/{desc}/g, `*${desc}*`)
-const caption = `🦊 Adiós de *"_${groupMetadata.subject}_"*\n👤 _Usuario_ » ${username}\n✰ ${mensaje}\n★ _Ahora somos ${groupSize} Miembros._\nꕥ Fecha » ${fecha}\n(˶˃⤙˂˶) Te esperamos pronto!\n> *➮ Puedes usar _#help_ para ver la lista de comandos.*`
+const caption = `💐 Adiós de *"_${groupMetadata.subject}_"*\n👤 _Usuario_ » ${username}\n✰ ${mensaje}\n★ _Ahora somos ${groupSize} Miembros._\nꕥ Fecha » ${fecha}\n(˶˃⤙˂˶) Te esperamos pronto!\n> *➮ Puedes usar _#help_ para ver la lista de comandos.*`
 return { pp, caption, mentions: [userId] }
 }
 let handler = m => m
