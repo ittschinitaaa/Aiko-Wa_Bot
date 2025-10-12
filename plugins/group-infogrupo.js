@@ -11,7 +11,7 @@ const rawPrimary = typeof chat.primaryBot === 'string' ? chat.primaryBot : '';
 const botprimary = rawPrimary.endsWith('@s.whatsapp.net') ? `@${rawPrimary.split('@')[0]}` : 'Aleatorio';  
 const totalreg = Object.keys(global.db.data.users).length
 
-const text = `「✦」Grupo ◢ ${groupMetadata.subject} ◤
+const text = `\`「✦」Grupo ౨${groupMetadata.subject}ৎ\`
 
 👑 *Creador* » ${creador}
 👤 *Miembros* » ${participants.length} Participantes
@@ -20,18 +20,18 @@ const text = `「✦」Grupo ◢ ${groupMetadata.subject} ◤
 🤖 *Bot principal* » ${botprimary}
 
 *▢ Opciones:*
-> ✰ *${botname}* » ${isBanned ? '✗ Desactivado' : '✓ Activado'}
-> ✰ *Welcome* » ${welcome ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *Alertas* » ${detect ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *Anti-Link* » ${antiLink ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *Only-Admin* » ${modoadmin ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *NSFW* » ${nsfw ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *Gacha* » ${gacha ? '✓ Activado' : '✗ Desactivado'}
-> ✰ *Economy* » ${economy ? '✓ Activado' : '✗ Desactivado'}
+> 🪻 *${botname}* » ${isBanned ? '✗ Desactivado' : '✓ Activado'}
+> 🌷 *Welcome* » ${welcome ? '✓ Activado' : '✗ Desactivado'}
+> 🪻 *Alertas* » ${detect ? '✓ Activado' : '✗ Desactivado'}
+> 🌷 *Anti-Link* » ${antiLink ? '✓ Activado' : '✗ Desactivado'}
+> 🪻 *Only-Admin* » ${modoadmin ? '✓ Activado' : '✗ Desactivado'}
+> 🌷 *NSFW* » ${nsfw ? '✓ Activado' : '✗ Desactivado'}
+> 🪻 *Gacha* » ${gacha ? '✓ Activado' : '✗ Desactivado'}
+> 🌷 *Economy* » ${economy ? '✓ Activado' : '✗ Desactivado'}
 
 *▢ Mensajes:*
-> ★ *Welcome* » ${(sWelcome || 'Sin mensaje de bienvenida').replace(/{usuario}/g, `@${m.sender.split('@')[0]}`).replace(/{grupo}/g, `*${groupMetadata.subject}*`).replace(/{desc}/g, `*${groupMetadata.desc || 'Sin descripción'}*`)}
-> ★ *Bye* » ${(sBye || 'Sin mensaje de despedida').replace(/{usuario}/g, `@${m.sender.split('@')[0]}`).replace(/{grupo}/g, `*${groupMetadata.subject}*`).replace(/{desc}/g, `*${groupMetadata.desc || 'Sin descripción'}*`)}`
+> 📝 *Welcome* » ${(sWelcome || 'Sin mensaje de bienvenida').replace(/{usuario}/g, `@${m.sender.split('@')[0]}`).replace(/{grupo}/g, `*${groupMetadata.subject}*`).replace(/{desc}/g, `*${groupMetadata.desc || 'Sin descripción'}*`)}
+> 📝 *Bye* » ${(sBye || 'Sin mensaje de despedida').replace(/{usuario}/g, `@${m.sender.split('@')[0]}`).replace(/{grupo}/g, `*${groupMetadata.subject}*`).replace(/{desc}/g, `*${groupMetadata.desc || 'Sin descripción'}*`)}`
 conn.sendFile(m.chat, pp, 'img.jpg', text, m, false, { mentions: [owner, rawPrimary, m.sender] })
 }
 
