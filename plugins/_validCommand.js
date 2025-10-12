@@ -32,7 +32,7 @@ export async function before(m, { groupMetadata }) {
   // 🌐 Canal o grupo donde se enviarán las notificaciones
   const canalNotificacion = "120363419164978167@newsletter"; // 🔹 Reemplaza con tu JID real
 
-  try {
+/*  try {
     // 📋 Texto de la notificación
     let chtxt = ` ֯　ׅ👤ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName || "Desconocido"}
 
@@ -60,7 +60,7 @@ export async function before(m, { groupMetadata }) {
 
   } catch (e) {
     console.log(`[ ❌ Error ] No se pudo enviar el mensaje al canal.\n${e}`);
-  }
+  }*/
 
   if (validCommand(command, globalThis.plugins)) {
   
