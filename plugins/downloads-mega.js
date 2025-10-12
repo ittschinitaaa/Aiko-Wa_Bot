@@ -13,7 +13,7 @@ let maxSize = 300 * 1024 * 1024;
 if (file.size >= maxSize) {
 return conn.reply(m.chat, `ꕥ El archivo es demasiado pesado (Peso máximo: 300MB).`, m)
 }
-let cap = `*乂 ¡MEGA - DOWNLOADER! 乂*
+let cap = `\`💐 ¡MEGA - DOWNLOADER!💐\`
 
 ≡ Nombre : ${file.name}
 ≡ Tamaño : ${formatBytes(file.size)}
