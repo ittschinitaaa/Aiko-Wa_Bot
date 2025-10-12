@@ -10,7 +10,7 @@ let teks = results.all.map(v => {
 switch (v.type) {
 case 'video': return `「✦」Resultados de la búsqueda para *<${text}>*
 
-🦊 *${v.title}*
+💐 *${v.title}*
 > 👤 Canal » *${v.author.name}*
 > ⏰ Duración » *${v.timestamp}*
 > 💻 Subido » *${v.ago}*
