@@ -1,6 +1,6 @@
 let handler = async (m, { usedPrefix, command }) => {
 let uptime = await process.uptime()
-let runtime = `> ✰ Tiempo activa: ${rTime(uptime)}`
+let runtime = `> 🍄 Tiempo activa: ${rTime(uptime)}`
 await m.react('✅')   
 conn.reply(m.chat, runtime, m)
 }
