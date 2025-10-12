@@ -14,7 +14,7 @@ const filename = data.filename
 const filesize = data.size || 'desconocido'
 const mimetype = data.mime || lookup(data.extension?.toLowerCase()) || 'application/octet-stream'
 const dl_url = data.link.includes('u=') ? decodeURIComponent(data.link.split('u=')[1]) : data.link
-const caption = `乂 MEDIAFIRE - DESCARGA 乂\n\n🦊 Nombre » ${filename}\n🗂 Peso » ${filesize}\n📌 MimeType » ${mimetype}\n🔗 Enlace » ${text}`
+const caption = `乂 MEDIAFIRE - DESCARGA 乂\n\n🌼 Nombre » ${filename}\n🗂 Peso » ${filesize}\n📌 MimeType » ${mimetype}\n🔗 Enlace » ${text}`
 await conn.sendMessage(m.chat, { document: { url: dl_url }, fileName: filename, mimetype, caption }, { quoted: m })
 await m.react('✅')
 } catch (e) {
