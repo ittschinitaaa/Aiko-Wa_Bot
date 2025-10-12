@@ -8,7 +8,7 @@ const owner = groupMetadata.owner || groupAdmins.find((p) => p.admin === 'supera
 const pesan = args.join` `
 await m.react('👑')
 const oi = `» ${pesan}`
-const text = `*『✦』𝐒𝐎𝐋𝐈𝐂𝐈𝐓𝐀𝐍𝐃𝐎 𝐋𝐎𝐒 𝐀𝐃𝐌𝐈𝐍𝐒:*  
+const text = `\`『✦』𝐒𝐎𝐋𝐈𝐂𝐈𝐓𝐀𝐍𝐃𝐎 𝐋𝐎𝐒 𝐀𝐃𝐌𝐈𝐍𝐒:\` 
   
 ${listAdmin}
 
