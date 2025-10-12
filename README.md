@@ -1,3 +1,27 @@
+> [!IMPORTANT]
+> **Este proyecto está en constante evolución. Estamos comprometidos en ofrecer a nuestra comunidad un Bot increíble. Te invitamos a instalarlo y para estar al tanto de todas las novedades.**
+
+<p align="center"> 
+<img src="https://files.catbox.moe/gr75lp.mp4" alt="SakuraBot-MD" style="width: 75%; height: auto; max-width: 100px;">
+
+<p align="center"> 
+<a href="#"><img title="SakuraBot-MD" src="https://img.shields.io/badge/¡Disfruta de un Bot totalmente gratuito, con múltiples funciones y de código abierto! -purple?colorA=%239b33b0&colorB=%231c007b&style=for-the-badge"></a> 
+</p>
+
+---
+
+## 🪻 Descripción 
+
+`Luna Bot` es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofrece una variedad de características para mejorar tu experiencia en WhatsApp.
+
+---
+
+## 🪻 Características
+
+- Respuestas automáticas
+- Gestión de grupos
+- Juegos interactivos
+- Integración con APIs externas
 
 ---
 
@@ -7,7 +31,7 @@ href="https://www.mediafire.com/file/wkinzgpb0tdx5qh/com.termux_1022.apk/file"><
 
 ### **` Instalación por termux`**
 <details>
-<summary><b>✰ Instalación Manual</b></summary>
+<summary><b💐✰ Instalación Manual</b></summary>
 
 > *Comandos para instalar de forma manual*
 ```bash
@@ -32,7 +56,7 @@ npm start
 </details>
 
 <details>
-  <summary><b>⏰ Comandos para mantener más tiempo activo el Bot</b></summary>
+  <summary><b>🍄 Comandos para mantener más tiempo activo el Bot</b></summary>
 
 > *Ejecutar estos comandos dentro de la carpeta Aiko-Bot*
 ```bash
@@ -76,7 +100,7 @@ cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run code
 </details>
 
 <details>
-  <summary><b>💻 Actualizar Aiko-Bot</b></summary>
+  <summary><b>🌻 Actualizar Aiko-Bot</b></summary>
 
 > **Utiliza esta opción únicamente si deseas actualizar a la última versión de Aiko. Hemos implementado un método ingenioso mediante comandos para realizar la actualización, pero ten en cuenta que al usarla se eliminarán todos los archivos de la versión actual y se reemplazarán con los de la nueva versión. Solo se conservará la base de datos, por lo que será necesario volver a vincular el Bot**  
 
@@ -97,7 +121,7 @@ cd && cd Aiko-Bot && nano settings.js
 </details>
 
 ---
-### **`➮ Enlaces útiles`**
+### **`🌷 Enlaces útiles`**
 
 <details>
 <summary><b> ✰ Contáctos</b></summary>
