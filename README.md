@@ -1,42 +1,3 @@
-<h1 align="center">⏤͟͟͞͞𝙎𝙀𝙉𝙆𝙊 𝘽𝙊𝙏 ☆</h1>
-
-<img src= "https://files.catbox.moe/rq6lzs.jpg">
-</p>
-
-### *`❕️ Información importante`*
-Este proyecto **no está afiliado de ninguna manera** con `WhatsApp`, `Inc. WhatsApp` es una marca registrada de `WhatsApp LLC`, y este bot es un **desarrollo independiente** que **no tiene ninguna relación oficial con la compañía**.
-
-<details>
-<summary><b> ✪ Descripción</b></summary>
-
-Senko bot es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofrece una variedad de características para mejorar tu experiencia en WhatsApp.
-
-#### Características
-Configuración avanzada de grupos 
-Bienvenidas personalizadas  
-Herramientas útiles  
-Juegos RPG (Gacha y Economía)  
-Funciones de Inteligencia Artificial  
-Descargas y búsquedas multi-plataforma  
-Sub-Bots (JadiBot)  
-Extensiones adicionales
-</details>
-
----
-### **`★ 𝗝𝗦𝗖𝗹𝗼𝘂𝗱 ★`**
-
-<a
-href="https://dash.twb.qzz.io/"><img src="https://files.catbox.moe/ghvr2l.jpg" height="150px"></a>
-
-<details>
- <summary><b> ❒ Servidor JSCloud</b></summary>
-
-* Dashboard : [`Dash`](https://dash.twb.qzz.io/)
-* Canal de WhatsApp : [`Canal`](https://whatsapp.com/channel/0029VayXJte65yD6LQGiRB0R)
-* Comunidad : [`Aquí`](https://chat.whatsapp.com/HKgiZrthylTJ9C9VMdCLS7)
-* Contacto : [`Maycol`](https://wa.me/51921826291)
-
-</details>
 
 ---
 
@@ -44,7 +5,7 @@ href="https://dash.twb.qzz.io/"><img src="https://files.catbox.moe/ghvr2l.jpg" h
 <a
 href="https://www.mediafire.com/file/wkinzgpb0tdx5qh/com.termux_1022.apk/file"><img src="https://qu.ax/finc.jpg" height="125px"></a> 
 
-### **`🦊 Instalación por termux`**
+### **` Instalación por termux`**
 <details>
 <summary><b>✰ Instalación Manual</b></summary>
 
@@ -56,7 +17,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/ittschinitaaa/Senko-Bot && cd Senko-Bot
+git clone https://github.com/ittschinitaaa/Draculaura-MD && cd Draculaura-MD
 ```
 ```bash
 yarn install
@@ -73,7 +34,7 @@ npm start
 <details>
   <summary><b>⏰ Comandos para mantener más tiempo activo el Bot</b></summary>
 
-> *Ejecutar estos comandos dentro de la carpeta Senko-Bot*
+> *Ejecutar estos comandos dentro de la carpeta Draculaura-MD*
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ``` 
@@ -98,38 +59,38 @@ pm2 start index
 ### En caso de detenerse
 > _Si despues que ya instalastes el bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos:_
 ```bash
-cd && cd Senko-Bot && npm start
+cd && cd Draculaura-MD && npm start
 ```
 ----
 ### Obtener nuevo código QR 
 > *Detén el bot, haz click en el símbolo (ctrl) [default=z] usar la letra "z" + "ENTER" hasta que salga algo verdes similar a: `Senko-Bot $`*
 > **Escribe los siguientes comandos uno x uno :**
 ```bash 
-cd && cd Senko-Bot && rm -rf sessions/Principal && npm run qr
+cd && cd Draculaura-MD && rm -rf sessions/Principal && npm run qr
 ```
 ----
 ### Obtener nuevo código de teléfono 
 ```bash 
-cd && cd Senko-Bot && rm -rf sessions/Principal && npm run code
+cd && cd Draculaura-MD && rm -rf sessions/Principal && npm run code
 ```
 </details>
 
 <details>
-  <summary><b>💻 Actualizar Senko-Bot</b></summary>
+  <summary><b>💻 Actualizar Draculaura</b></summary>
 
-> **Utiliza esta opción únicamente si deseas actualizar a la última versión de Senko-Bot. Hemos implementado un método ingenioso mediante comandos para realizar la actualización, pero ten en cuenta que al usarla se eliminarán todos los archivos de la versión actual y se reemplazarán con los de la nueva versión. Solo se conservará la base de datos, por lo que será necesario volver a vincular el Bot.**  
+> **Utiliza esta opción únicamente si deseas actualizar a la última versión de Draculaura. Hemos implementado un método ingenioso mediante comandos para realizar la actualización, pero ten en cuenta que al usarla se eliminarán todos los archivos de la versión actual y se reemplazarán con los de la nueva versión. Solo se conservará la base de datos, por lo que será necesario volver a vincular el Bot**  
 
 **Comandos para actualizar Senko-Bot de forma automática**
 
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Senko-Bot/master/termux.sh | bash 
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Draculaura-MD/master/termux.sh | bash 
 ```
 **👑 Volverte owner del Bot**
 
 *Si después de instalar el bot e iniciar la sesión (deseas poner tu número es la lista de owner pon este comando:*
 
 ```bash
-cd && cd Senko-Bot && nano settings.js
+cd && cd Draculaura-MD && nano settings.js
 ```
 #### Para que no pierda su progreso en Senko-abot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 > *Estos comandos solo funcionan para TERMUX, REPLIT, LINUX*
