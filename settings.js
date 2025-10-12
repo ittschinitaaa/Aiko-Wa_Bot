@@ -25,15 +25,15 @@ global.mods = ["5492644996684"]
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.0.0 | Latest"
-global.nameqr = "⏤͟͟͞͞𝐃𝐑𝐀𝐂𝐔𝐋𝐀𝐔𝐑𝐀 🦇"
+global.nameqr = "𝗔іk᥆-𝗯᥆꯭𝗍 🌸"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
 global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botname = "⏤͟͟͞͞𝐃ℝ𝐀ℂ𝐔𝕃𝐀𝕌𝐑𝔸 🦇"
-global.textbot = "ძrᥲᥴᥙᥣᥲᥙrᥲ, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
+global.botname = "𝗔іk᥆-𝗯᥆꯭𝗍 🌷"
+global.textbot = "𝖠іk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
