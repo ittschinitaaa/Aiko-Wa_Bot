@@ -3,7 +3,7 @@ import Jimp from 'jimp'
 
 const handler = async (m, { conn, command, usedPrefix, text }) => {
 const isSubBots = [conn.user.jid, ...global.owner.map(([number]) => `${number}@s.whatsapp.net`)].includes(m.sender)
-if (!isSubBots) return m.reply(`❀ El comando *${command}* solo puede ser ejecutado por el Socket.`)
+if (!isSubBots) return m.reply(`🌸 El comando *${command}* solo puede ser ejecutado por el Socket.`)
 try {
 const value = text ? text.trim() : ''
 switch (command) {
@@ -16,21 +16,21 @@ if (!media) return conn.reply(m.chat, `ꕥ No se pudo obtener la imagen.`, m)
 const image = await Jimp.read(media)
 const buffer = await image.getBufferAsync(Jimp.MIME_JPEG)
 await conn.updateProfilePicture(conn.user.jid, buffer)
-conn.reply(m.chat, `❀ Se cambió la *foto de perfil* del Socket correctamente.`, m)
+conn.reply(m.chat, `🌻 Se cambió la *foto de perfil* del Socket correctamente.`, m)
 break
 }
 case 'setstatus': case 'setbio': {
-if (!text) return conn.reply(m.chat, `❀ Por favor, ingresa la nueva biografía que deseas ponerme.`, m)
+if (!text) return conn.reply(m.chat, `🍁 Por favor, ingresa la nueva biografía que deseas ponerme.`, m)
 await conn.updateProfileStatus(text)
-conn.reply(m.chat, `❀ Se cambió la biografía del Socket a *"${text}"* correctamente.`, m)
+conn.reply(m.chat, `🍯 Se cambió la biografía del Socket a *"${text}"* correctamente.`, m)
 break
 }
 case 'setusername': case 'setuser': {
-if (!value) return conn.reply(m.chat, '❀ Ingresa el nuevo nombre de usuario que deseas establecer.', m)
+if (!value) return conn.reply(m.chat, '🌱 Ingresa el nuevo nombre de usuario que deseas establecer.', m)
 if (value.length < 3 || value.length > 25)
-return conn.reply(m.chat, 'ꕥ El nombre debe tener entre 3 y 25 caracteres.')
+return conn.reply(m.chat, '☘️ El nombre debe tener entre 3 y 25 caracteres.')
 await conn.updateProfileName(value)
-m.reply(`❀ Se cambió el nombre de usuario a *${value}* correctamente.`)
+m.reply(`🌵 Se cambió el nombre de usuario a *${value}* correctamente.`)
 break
 }}} catch (error) {
 m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`)
