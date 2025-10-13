@@ -26,7 +26,7 @@ let handler = async (m, { conn }) => {
     {
       name: '𝕮𝖍𝖎𝖓𝖆 🔥',
       desc: 'Creadora de Aiko-Bot',
-      image: 'https://files.cloudkuimages.guru/images/MLrB6aiO.jpg',
+      image: 'https://files.catbox.moe/bp1qfw.png',
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
         { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
@@ -53,7 +53,7 @@ let handler = async (m, { conn }) => {
         text: `✨️`
       }),
       footer: proto.Message.InteractiveMessage.Footer.fromObject({
-        text: '> Conoce más sobre nuestros creadores siguiendo sus redes sociales. Haz clic en cualquier botón para acceder a sus perfiles y descubrir su trabajo. Si te gustaría apoyarlos, también puedes realizar una donación a través de nuestro PayPal.'
+        text: '> Conoce más sobre nuestra creadora siguiendo sus redes sociales. Haz clic en cualquier botón para acceder a su perfil y descubrir su trabajo.'
       }),
       header: proto.Message.InteractiveMessage.Header.fromObject({
         hasMediaAttachment: true,
@@ -74,10 +74,10 @@ let handler = async (m, { conn }) => {
         },
         interactiveMessage: proto.Message.InteractiveMessage.fromObject({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: '✨️ Creadores de Roxy-MD & NagiBot-MD ✨️'
+            text: '𝗖rᥱᥲძ᥆rᥲ 𝗱ᥱ 𝗦ᥱᥒk᥆-𝗕᥆𝗍 𝘆 𝗔іk᥆-𝗕᥆𝗍'
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: 'Conoce a los desarrolladores del bot'
+            text: 'Conoce a la desarrolladora de los bot'
           }),
           carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({
             cards
