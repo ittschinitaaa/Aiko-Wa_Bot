@@ -50,7 +50,7 @@ let handler = async (m, { conn }) => {
 
     cards.push({
       body: proto.Message.InteractiveMessage.Body.fromObject({
-        text: `✨️`
+        text: `⍴᥆ᥕᥱrᥱძ ᑲᥡ ᥴһіᥒі𝗍ᥲ`
       }),
       footer: proto.Message.InteractiveMessage.Footer.fromObject({
         text: '> Conoce más sobre nuestra creadora siguiendo sus redes sociales. Haz clic en cualquier botón para acceder a su perfil y descubrir su trabajo.'
