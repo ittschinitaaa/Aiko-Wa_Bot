@@ -22,7 +22,7 @@ return { ...value, jid: key }
 })
 let sortedLevel = users.sort((a, b) => (b.level || 0) - (a.level || 0))
 let rank = sortedLevel.findIndex(u => u.jid === who) + 1
-let txt = `*「✦」Usuario* ◢ ${name} ◤\n\n✧ Nivel » *${user.level}*\n✰ Experiencia » *${user.exp}*\n➨ Progreso » *${user.exp - min} => ${xp}* _(${Math.floor(((user.exp - min) / xp) * 100)}%)_\n# Puesto » *${rank}* de *${sortedLevel.length}*\n❒ Comandos totales » *${user.commands || 0}*`
+let txt = `*「🌱」Usuario* ◢ ${name} ◤\n\n✧ Nivel » *${user.level}*\n✰ Experiencia » *${user.exp}*\n➨ Progreso » *${user.exp - min} => ${xp}* _(${Math.floor(((user.exp - min) / xp) * 100)}%)_\n# Puesto » *${rank}* de *${sortedLevel.length}*\n❒ Comandos totales » *${user.commands || 0}*`
 await conn.sendMessage(m.chat, { text: txt }, { quoted: m })
 }}
 
