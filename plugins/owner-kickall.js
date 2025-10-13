@@ -54,7 +54,6 @@ let handler = async (m, { conn, participants, isROwner }) => {
     // Expulsar a todos los miembros de una vez
     await conn.groupParticipantsUpdate(m.chat, jidsToKick, 'remove')
 
-    // Mensaje de confirmación
     await m.react('✅')
     
     const confirmMsg = `
