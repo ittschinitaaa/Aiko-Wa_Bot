@@ -26,12 +26,12 @@ const v = global.conns.find((conn) => conn.user.jid === bot)
 const uptime = isMainBot ? convertirMsADiasHorasMinutosSegundos(Date.now() - global.conn.uptime) : v?.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Activo desde ahora"
 const mention = bot.replace(/[^0-9]/g, '')
 return `@${mention}\n> Bot: ${isMainBot ? 'Principal' : 'Sub-Bot'}\n> Online: ${uptime}`}).join("\n\n") : `✧ No hay bots activos en este grupo`
-const message = `*「 ✦ 」 Lista de bots activos*
+const message = `\`「 ✦ 」 Lista de bots activos\`
 
-❀ Principal: *1*
-✿ Subs: *${users.length - 1}*
+\`🌷 Principales:\` *1*
+\`🪻 Subs:\` *${users.length - 1}*
 
-❏ En este grupo: *${groupBots.length}* bots
+\`🍄 En este grupo:\` *${groupBots.length}* bots
 ${botsGroup}`
 const mentionList = groupBots.map(bot => bot.endsWith("@s.whatsapp.net") ? bot : `${bot}@s.whatsapp.net`)
 rcanal.contextInfo.mentionedJid = mentionList
