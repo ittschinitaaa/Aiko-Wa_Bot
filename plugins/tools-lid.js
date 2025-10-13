@@ -5,11 +5,11 @@ const userId = mentionedJid.length > 0 ? mentionedJid[0] : (m.quoted ? await m.q
 const participant = participantList.find(participant => participant.id === userId)
 await m.react('🕒')
 if (participant) {
-await conn.sendMessage(m.chat, { text: `❀ @${userId.split('@')[0]}, tu LID es: ${participant.lid}`, mentions: [userId] }, { quoted: m })
-await m.react('✔️')
+await conn.sendMessage(m.chat, { text: `🪻 @${userId.split('@')[0]}, tu LID es: ${participant.lid}`, mentions: [userId] }, { quoted: m })
+await m.react('✅')
 } else {
 await conn.sendMessage(m.chat, { text: '⚠︎ No se pudo encontrar tu LID.' })
-await m.react('✖️')
+await m.react('❌')
 }}
 
 handler.command = ['lid', 'mylid']
