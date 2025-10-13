@@ -2,7 +2,7 @@ import axios from 'axios'
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 let handler = async (m, { conn }) => {
-  const proses = '🌸 Obteniendo información de los creadores...'
+  const proses = '🌸 Obteniendo información de la creadora...'
   await conn.sendMessage(m.chat, { text: proses }, { quoted: m })
 
   async function createImage(url) {
@@ -14,27 +14,23 @@ let handler = async (m, { conn }) => {
 
   const owners = [
     {
-      name: 'DevBrayan',
-      desc: 'Creador Principal de NagiBotV3',
+      name: '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ',
+      desc: 'Creador Principal de Senko-Bot',
       image: 'https://files.cloudkuimages.guru/images/fJk8xWXl.jpg',
       buttons: [
-        { name: 'WhatsApp', url: 'https://wa.me/50231458537' },
-        { name: 'Instagram', url: 'https://www.instagram.com/elbrayan502ff' },
-        { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61556686993783' },
-        { name: 'Telegram', url: 'https://t.me/DevBrayan' },
-        { name: 'TikTok', url: 'https://www.tiktok.com/@fantom_uwu_330' },
-        { name: 'PayPal', url: 'https://paypal.me/BrayanMoscoso' }
+        { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
+        { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
+        { name: 'Github', url: 'https://www.github.com/ittschinitaaa' },
       ]
     },
     {
-      name: 'DavBrayan2',
-      desc: 'Co-Creador de Roxy-MD',
+      name: '𝕮𝖍𝖎𝖓𝖆 🔥',
+      desc: 'Creadora de Aiko-Bot',
       image: 'https://files.cloudkuimages.guru/images/MLrB6aiO.jpg',
       buttons: [
-        { name: 'WhatsApp', url: 'https://wa.me/573001533523' },
-        { name: 'Instagram', url: 'https://www.instagram.com/elbrayan502ff' },
-        { name: 'TikTok', url: 'https://www.tiktok.com/@fantom_uwu_330' },
-        { name: 'PayPal', url: 'https://paypal.me/davidryze' }
+        { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
+        { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
+        { name: 'Github', url: 'https://www.githib.com/ittschinitaaa' },
       ]
     }
   ]
