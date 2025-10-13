@@ -16,7 +16,7 @@ let handler = async (m, { conn }) => {
     {
       name: '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ',
       desc: 'Creador Principal de Senko-Bot',
-      image: 'https://files.cloudkuimages.guru/images/fJk8xWXl.jpg',
+      image: 'https://files.catbox.moe/ep8t7x.jpg',
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
         { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
