@@ -1,6 +1,6 @@
 const handler = async (m, { conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin }) => {
 try {
-if (!args[0]) return conn.reply(m.chat, `❀ Ingrese algún prefijo de un país para ejecutar el comando.`, m)
+if (!args[0]) return conn.reply(m.chat, `🌸 Ingrese algún prefijo de un país para ejecutar el comando.`, m)
 if (isNaN(args[0])) return conn.reply(m.chat, `ꕥ Ingrese algún prefijo de un país\nEjemplo: ${usedPrefix + command} 212`, m)
 const lol = args[0].replace(/[+]/g, '')
 const ps = participants.map(u => u.id).filter(v => v !== conn.user.jid && v.startsWith(lol))
@@ -10,7 +10,7 @@ const numeros = ps.map(v => '⭔ @' + v.replace(/@.+/, ''))
 const delay = time => new Promise(res => setTimeout(res, time))
 switch (command) {
 case 'listanum': case 'listnum': {
-conn.reply(m.chat, `❀ Lista de números con el prefijo +${lol} que están en este grupo:\n\n` + numeros.join`\n`, m, { mentions: ps })
+conn.reply(m.chat, `🌸 Lista de números con el prefijo +${lol} que están en este grupo:\n\n` + numeros.join`\n`, m, { mentions: ps })
 break
 }
 case 'kicknum': {
@@ -29,7 +29,7 @@ return m.reply(`⚠︎ Ocurrió un error.`, m)
 break
 }
 }} catch (e) {
-m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`)
+m.reply(`⚠️ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`)
 }}
 
 handler.command = ['kicknum', 'listnum', 'listanum']
