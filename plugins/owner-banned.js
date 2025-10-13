@@ -9,7 +9,7 @@ let mentionedJid = await m.mentionedJid
 let who = mentionedJid[0] ? mentionedJid[0] : m.quoted ? await m.quoted.sender : text ? no(text.split(' ')[0]) + '@s.whatsapp.net' : false
 switch (command) {
 case 'banned': {
-if (!who) return conn.reply(m.chat, '❀ Por favor, etiqueta, cita o escribe el número del usuario que quieres banear del Bot.', m)
+if (!who) return conn.reply(m.chat, '🌸 Por favor, etiqueta, cita o escribe el número del usuario que quieres banear del Bot.', m)
 var reason = 'Sin Especificar'
 if (mentionedJid && mentionedJid[0]) {
 var mentionIdx = args.findIndex(arg => arg.startsWith('@'))
@@ -31,38 +31,38 @@ await m.react('🕒')
 users[who].banned = true
 users[who].bannedReason = reason
 var nameBan = await conn.getName(who)
-await m.react('✔️')
-await conn.reply(m.chat, `❀ ${nameBan} ha sido baneado.\n> Razón: ${reason}`, m, { mentions: [who] })
+await m.react('✅')
+await conn.reply(m.chat, `🌼 ${nameBan} ha sido baneado.\n> Razón: ${reason}`, m, { mentions: [who] })
 await conn.reply(`${suittag}@s.whatsapp.net`, `❀ ${nameBan} fue baneado por ${await conn.getName(m.sender)}\n> ✦ Razón: ${reason}`, m)
 break
 }
 case 'unban': {
-if (!who) return conn.reply(m.chat, '❀ Por favor, etiqueta o coloca el número del usuario que quieres desbanear del Bot.', m)
-if (!users[who]) return m.reply('❀ El usuario no está registrado.', m)
+if (!who) return conn.reply(m.chat, '🌸 Por favor, etiqueta o coloca el número del usuario que quieres desbanear del Bot.', m)
+if (!users[who]) return m.reply('🌷 El usuario no está registrado.', m)
 if (!users[who].banned) return m.reply(`ꕥ @${who.split('@')[0]} no está baneado.`, m, { mentions: [who] })
 await m.react('🕒')
 users[who].banned = false
 users[who].bannedReason = ''
-await m.react('✔️')
+await m.react('✅')
 let nameUnban = await conn.getName(who)
-await conn.reply(m.chat, `❀ ${nameUnban} ha sido desbaneado.`, m, { mentions: [who] })
-await conn.reply(`${suittag}@s.whatsapp.net`, `❀ ${nameUnban} fue desbaneado por ${await conn.getName(m.sender)}.`, m)
+await conn.reply(m.chat, `🌹 ${nameUnban} ha sido desbaneado.`, m, { mentions: [who] })
+await conn.reply(`${suittag}@s.whatsapp.net`, `🌸 ${nameUnban} fue desbaneado por ${await conn.getName(m.sender)}.`, m)
 break
 }
 case 'block': {
-if (!who) return conn.reply(m.chat, '❀ Por favor, menciona al usuario que quieres bloquear del número de la Bot.', m)
+if (!who) return conn.reply(m.chat, '🌼 Por favor, menciona al usuario que quieres bloquear del número de la Bot.', m)
 await m.react('🕒')
 await conn.updateBlockStatus(who, 'block')
-await m.react('✔️')
-conn.reply(m.chat, `❀ Bloqueado correctamente a @${who.split('@')[0]}`, m, { mentions: [who] })
+await m.react('✅')
+conn.reply(m.chat, `🌸 Bloqueado correctamente a @${who.split('@')[0]}`, m, { mentions: [who] })
 break
 }
 case 'unblock': {
-if (!who) return conn.reply(m.chat, '❀ Por favor, menciona al usuario que quieres desbloquear del número de la Bot.', m)
+if (!who) return conn.reply(m.chat, '🌸 Por favor, menciona al usuario que quieres desbloquear del número de la Bot.', m)
 await m.react('🕒')
 await conn.updateBlockStatus(who, 'unblock')
-await m.react('✔️')
-conn.reply(m.chat, `❀ Desbloqueado correctamente a @${who.split('@')[0]}`, m, { mentions: [who] })
+await m.react('✅')
+conn.reply(m.chat, `🌼 Desbloqueado correctamente a @${who.split('@')[0]}`, m, { mentions: [who] })
 break
 }
 case 'banlist': {
@@ -78,7 +78,7 @@ return `▢ ${jid}`
 })
 const bannedText = `✦ Usuarios Baneados • Total: ${bannedUsers.length}\n${usersList.join('\n')}\n\n✧ Chats Baneados • Total: ${bannedChats.length}\n${chatsList.join('\n')}`.trim()
 const mentions = [...bannedUsers.map(([jid]) => jid), ...bannedChats.map(([jid]) => jid)]
-await m.react('✔️')
+await m.react('✅')
 conn.reply(m.chat, bannedText, m, { mentions })
 break
 }
@@ -91,11 +91,11 @@ let num = i.split('@')[0]
 listText += `▢ @${num}\n`
 }
 listText += '└───────────'
-await m.react('✔️')
+await m.react('✅')
 conn.reply(m.chat, listText, m, { mentions: blocklist })
 break
 }}} catch (e) {
-await m.react('✖️')
+await m.react('❌')
 return m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n` + (e.message || e))
 }}
 
