@@ -40,16 +40,16 @@ async function handler(m, { text, command }) {
 switch (command) {
 case 'letra':
 if (!text) {
-return conn.reply(m.chat, '❀ Por favor, ingresa el texto que quieres transformar.', m)
+return conn.reply(m.chat, '🌸 Por favor, ingresa el texto que quieres transformar.', m)
 }
 let result = await global.style(text)
 await m.react('🕓')
 m.reply(result)
-setTimeout(async () => await m.react('✔️'), 1000)
+setTimeout(async () => await m.react('✅'), 1000)
 break
 case 'style':
 if (!text) {
-return conn.reply(m.chat, '❀ Por favor, ingresa la nueva fuente que quieres establecer <1|2|3>.', m)
+return conn.reply(m.chat, '🌼 Por favor, ingresa la nueva fuente que quieres establecer <1|2|3>.', m)
 }
 let num = parseInt(text)
 if (!yStr[num]) {
@@ -58,8 +58,8 @@ return conn.reply(m.chat, `ꕥ Estilo ${num} no disponible. Usa del 1 al ${Objec
 global.currentFontStyle = num
 let name = styleNames[num] || `${num}`
 let example = await global.style('Hola mundo', num)
-await m.react('✔️')
-conn.reply(m.chat, `❀ Estilo de fuente cambiado a *(${name})*.\n> Ejemplo: *${example}*`, m)
+await m.react('✅')
+conn.reply(m.chat, `🌸 Estilo de fuente cambiado a *(${name})*.\n> Ejemplo: *${example}*`, m)
 break
 }}
 
