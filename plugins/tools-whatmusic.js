@@ -12,15 +12,15 @@ const acr = new acrcloud({
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   let q = m.quoted ? m.quoted : m
   if (!q.mimetype || (!q.mimetype.includes("audio") && !q.mimetype.includes("video"))) {
-    return m.reply("❀ Por favor, responde al audio del cual deseas buscar el título.")
+    return m.reply("🌱 Por favor, responde al audio del cual deseas buscar el título.")
   }
   let buffer = await q.download()
   try {
     await m.react('🕒')
     let data = await whatmusic(buffer)
     if (!data.length) {
-      await m.react('✖️')
-      return m.reply("✧ No se encontraron datos de la canción")
+      await m.react('❌')
+      return m.reply("☘️ No se encontraron datos de la canción")
     }
     let cap = "*乂 ¡SHAZAM - MUSIC! 乂*\n\n"
     for (let result of data) {
@@ -49,10 +49,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       }
     }, { quoted: m })
 
-    await m.react('✔️')
+    await m.react('✅')
   } catch (error) {
-    await m.react('✖️')
-    m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n` + error.message)
+    await m.react('❌')
+    m.reply(`⚠️ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n` + error.message)
   }
 }
 
