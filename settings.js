@@ -24,7 +24,7 @@ global.mods = ["5492644996684"]
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = "Baileys Multi Device"
-global.vs = "^1.0.0"
+global.vs = "1.0.0 (beta)"
 global.nameqr = "𝗔іk᥆-𝗯᥆꯭𝗍 🌸"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
