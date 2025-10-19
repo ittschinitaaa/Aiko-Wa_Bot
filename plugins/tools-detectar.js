@@ -7,7 +7,7 @@ await m.react('🕒')
 conn.sendPresenceUpdate('composing', m.chat)
 const pluginsDir = './plugins'
 const files = fs.readdirSync(pluginsDir).filter(file => file.endsWith('.js'))
-let response = `❀ *Revisión de Syntax Errors:*\n\n`
+let response = `🐦‍🔥 *Revisión de Syntax Errors:*\n\n`
 let hasErrors = false
 for (const file of files) {
 try {
@@ -17,7 +17,7 @@ hasErrors = true
 response += `⚠︎ *Error en:* ${file}\n\n> ● Mensaje: ${error.message}\n\n`
 }}
 if (!hasErrors) {
-response += '❀ ¡Todo está en orden! No se detectaron errores de sintaxis'
+response += '🪴 ¡Todo está en orden! No se detectaron errores de sintaxis'
 }
 await conn.reply(m.chat, response, m)
 await m.react('✅')
