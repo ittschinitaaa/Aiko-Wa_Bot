@@ -1,6 +1,6 @@
 const handler = async (m, { args, conn, usedPrefix }) => {
 try {
-if (!args[0]) return conn.reply(m.chat, `❀ Por favor, ingresa un enlace de Instagram/Facebook.`, m)
+if (!args[0]) return conn.reply(m.chat, `> 🌸 Por favor, ingresa un enlace de Instagram/Facebook.`, m)
 let data = []
 try {
 await m.react('🕒')
@@ -21,7 +21,7 @@ data = json.data.map(v => v.url)
 }
 if (!data.length) return conn.reply(m.chat, `ꕥ No se pudo obtener el contenido.`, m)
 for (let media of data) {
-await conn.sendFile(m.chat, media, 'instagram.mp4', `❀ Aquí tienes ฅ^•ﻌ•^ฅ.`, m)
+await conn.sendFile(m.chat, media, 'instagram.mp4', `> ☘️ Aquí tienes ฅ^•ﻌ•^ฅ.`, m)
 await m.react('✅')
 }} catch (error) {
 await m.react('❌')
