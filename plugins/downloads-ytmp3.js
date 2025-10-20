@@ -29,7 +29,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
     const sizeStr = size ? formatSize(size) : 'Desconocido'
 
     const caption = `🎶 *ＹＯＵＴＵＢＥ • ＭＰ3* ☁️
-────────────────────
+────────────────
 > 🎵 *𝐓𝐈𝐓𝐔𝐋𝐎:* ${info.title}
 > ⏰ *𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍:* ${video.timestamp}
 > 🎬 *𝐂𝐀𝐍𝐀𝐋:* ${video.author.name}
@@ -38,7 +38,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 > 🤩 *𝐂𝐀𝐋𝐈𝐃𝐀𝐃:* 128kbps
 > 🗓️ *𝐏𝐔𝐁𝐋𝐈𝐂𝐀𝐃𝐎:* ${video.ago}
 > 🔗 *𝐋𝐈𝐍𝐊:* ${video.url}
-────────────────────`
+────────────────`
 
     const thumb = (await conn.getFile(video.thumbnail)).data
 
