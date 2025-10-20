@@ -38,7 +38,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       const sizeMB = size ? parseInt(size) / 1024 / 1024 : 0
 
       const info = `🎬 *YOUTUBE MP4*
-────────────────────
+───────────────
 > 📌 *Título:* ${meta.title}
 > ⏱️ *Duración:* ${meta.duration?.timestamp || meta.timestamp}
 > 📺 *Canal:* ${meta.author?.name || "-"}
@@ -47,7 +47,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 > ⚡ *Calidad:* ${dl.quality}
 > 📅 *Publicado:* ${meta.ago}
 > 🔗 *Link:* ${meta.url}
-────────────────────
+───────────────
 > *≡ Enviando, espera un momento...*`
 
       await conn.sendMessage(m.chat, {
