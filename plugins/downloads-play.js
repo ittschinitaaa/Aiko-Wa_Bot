@@ -16,7 +16,8 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
       : search.videos?.[0]
 
     if (!video) return conn.reply(m.chat, '❌ *No se encontraron resultados para tu búsqueda.*', m)
-
+   
+    await m.react('✅')
     const { title, thumbnail, timestamp, views, ago, url, author } = video
     const vistas = formatViews(views)
     const canal = author?.name || 'Desconocido'
