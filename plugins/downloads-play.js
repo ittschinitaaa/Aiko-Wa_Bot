@@ -28,7 +28,7 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
      
 *👀 Vistas:* ${vistas}   
 *⏳ Duración:* ${timestamp}
-*💿 Calidad:* 320
+*💿 Calidad:* 320kbps
 *📆 Publicado:* ${ago}
 *🔗 Link:* ${url}
 
