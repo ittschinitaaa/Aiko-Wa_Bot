@@ -31,7 +31,7 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
 *📆 Publicado:* ${ago}
 *🔗 Link:* ${url}
 
-${botname} | ${author}`
+${botname} | ${etiqueta}`
 
     const thumb = (await conn.getFile(thumbnail))?.data
     const external = {
