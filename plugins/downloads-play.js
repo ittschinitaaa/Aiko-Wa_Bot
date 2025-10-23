@@ -65,7 +65,7 @@ ${botname} | ${author}`
           contextInfo: {
             externalAdReply: {
               title: title,
-              body: 'Archivo descargado' ,
+              body: `${dev}`,
               mediaType: 1,
               thumbnail: thumb,
               mediaUrl: url,
