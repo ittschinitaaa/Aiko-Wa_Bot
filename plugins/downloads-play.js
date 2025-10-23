@@ -53,7 +53,7 @@ ${botname} | ${etiqueta}`
 
     if (['playaudio','play'].includes(command)) {
       try {
-        const res = await fetch(`https://api.vreden.my.id/api/v1/download/youtube/audio?url=${url}&quality=130`)
+        const res = await fetch(`https://api.vreden.my.id/api/v1/download/youtube/audio?url=${url}&quality=320`)
         const json = await res.json()
         
         if (!json.result?.download?.url) throw '*⚠️ No se obtuvo un enlace válido.*'
