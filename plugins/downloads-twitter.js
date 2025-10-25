@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, text }) => {
 if (!text) {
-return conn.reply(m.chat, `❀ Te faltó el link de una imagen/video de twitter.`, m)
+return conn.reply(m.chat, `🐦‍🔥 Te faltó el link de una imagen/video de twitter.`, m)
 }
 try {
 await m.react('🕒')
