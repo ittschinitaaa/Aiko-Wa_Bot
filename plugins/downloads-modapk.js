@@ -1,7 +1,7 @@
 import { search, download } from 'aptoide-scraper'
 
 var handler = async (m, { conn, usedPrefix, command, text }) => {
-if (!text) return conn.reply(m.chat, `❀ Por favor, ingrese el nombre de la apk para descargarlo.`, m)
+if (!text) return conn.reply(m.chat, `🌺 Por favor, ingrese el nombre de la apk para descargarlo.`, m)
 try {
 await m.react('🕒')
 let searchA = await search(text)
