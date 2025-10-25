@@ -2,7 +2,7 @@ import axios from 'axios'
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 let handler = async (m, { conn }) => {
-  const proses = '🌸 Obteniendo información de la creadora...'
+  const proses = '> ✿ Obteniendo información de la creadora...'
   await conn.sendMessage(m.chat, { text: proses }, { quoted: m })
 
   async function createImage(url) {
@@ -15,8 +15,8 @@ let handler = async (m, { conn }) => {
   const owners = [
     {
       name: '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ',
-      desc: 'Creador Principal de Senko-Bot',
-      image: 'https://files.catbox.moe/ep8t7x.jpg',
+      desc: '𝗖𝗿𝗲𝗮𝗱𝗼𝗿𝗮 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗮𝗹 𝗱𝗲 𝗔𝗶𝗸𝗼-𝗕𝗼𝘁',
+      image: 'https://files.catbox.moe/bp1qfw.png',
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
         { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
@@ -25,8 +25,8 @@ let handler = async (m, { conn }) => {
     },
     {
       name: '𝕮𝖍𝖎𝖓𝖆 🔥',
-      desc: 'Creadora de Aiko-Bot',
-      image: 'https://files.catbox.moe/bp1qfw.png',
+      desc: '𝗖𝗿𝗲𝗮𝗱𝗼𝗿𝗮 𝗱𝗲 𝗦𝗲𝗻𝗸𝗼-𝗕𝗼𝘁',
+      image: 'https://files.catbox.moe/ep8t7x.jpg',
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/573243768166' },
         { name: 'Instagram', url: 'https://www.instagram.com/its.chinitaaa_' },
