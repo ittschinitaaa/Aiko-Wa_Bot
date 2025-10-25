@@ -3,7 +3,7 @@ import baileys from '@whiskeysockets/baileys'
 import cheerio from 'cheerio'
 
 let handler = async (m, { conn, text, args, usedPrefix }) => {
-if (!text) return m.reply(`❀ Por favor, ingresa lo que deseas buscar por Pinterest.`)
+if (!text) return m.reply(`🍄 Por favor, ingresa lo que deseas buscar por Pinterest.`)
 try {
 await m.react('🕒')
 if (text.includes("https://")) {
