@@ -37,7 +37,7 @@ const buffer = await fetchSticker(text)
 const stiker = await sticker(buffer, false, texto1, texto2)
 if (!stiker) throw new Error('ꕥ No se pudo generar el sticker.')
 await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
-await m.react('✔️')
+await m.react('✅')
 break
 }
 case 'bratv': {
@@ -47,7 +47,7 @@ await m.react('🕒')
 const videoBuffer = await fetchStickerVideo(text)
 const stickerBuffer = await sticker(videoBuffer, null, texto1, texto2)
 await conn.sendMessage(m.chat, { sticker: stickerBuffer }, { quoted: m })
-await m.react('✔️')
+await m.react('✅')
 break
 }
 case 'emojimix': {
@@ -60,7 +60,7 @@ for (let result of res.results) {
 let stiker = await sticker(false, result.url, texto1, texto2)
 await conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }
-await m.react('✔️')
+await m.react('✅')
 break
 }
 case 'qc': {
@@ -78,7 +78,7 @@ const json = await axios.post('https://bot.lyo.su/quote/generate', quoteObj, { h
 const buffer = Buffer.from(json.data.result.image, 'base64')
 const stiker = await sticker(buffer, false, texto1, texto2)
 if (stiker) {
-await m.react('✔️')
+await m.react('✅')
 await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
 }
 break
@@ -93,10 +93,10 @@ const nuevoPack = parts[0] || texto1
 const nuevoAutor = parts[1] || texto2
 const exif = await addExif(stickerData, nuevoPack, nuevoAutor)
 await conn.sendMessage(m.chat, { sticker: exif }, { quoted: m })
-await m.react('✔️')
+await m.react('✅')
 break
 }}} catch (e) {
-await m.react('✖️')
+await m.react('❌')
 conn.sendMessage(m.chat, { text: `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}` }, { quoted: m })
 }}
 
