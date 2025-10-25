@@ -3,7 +3,7 @@ import { File } from "megajs"
 
 const handler = async (m, { conn, args, usedPrefix, command, text }) => {
 if (!text) {
-return conn.reply(m.chat, `❀ Por favor, envia un link de MEGA para descargar el archivo.`, m)
+return conn.reply(m.chat, `🌹 Por favor, envia un link de MEGA para descargar el archivo.`, m)
 }
 try {
 await m.react('🕒')
@@ -33,9 +33,9 @@ const mimeTypes = {
 }
 let mimetype = mimeTypes[fileExtension] || "application/octet-stream"
 await conn.sendFile(m.chat, data, file.name, "", m, null, { mimetype, asDocument: true })
-await m.react('✔️')
+await m.react('✅')
 } catch (e) {
-await m.react('✖️')
+await m.react('❌')
 return conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
 
