@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import { lookup } from 'mime-types'
 
 let handler = async (m, { conn, text, usedPrefix }) => {
-if (!text) return conn.reply(m.chat, '❀ Te faltó el enlace de Mediafire.', m)
+if (!text) return conn.reply(m.chat, '🍒 Te faltó el enlace de Mediafire.', m)
 if (!/^https:\/\/www\.mediafire\.com\//i.test(text)) return conn.reply(m.chat, 'ꕥ Enlace inválido.', m)
 try {
 await m.react('🕒')
