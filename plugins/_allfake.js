@@ -27,7 +27,7 @@ var correo = 'itts.chinitaaa@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
-global.packsticker = `𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ\n👑 Usuario: ${nombre}\n🤖 Bot: ${botname}\n📅 Fecha: ${fecha}\n⏰ Hora: ${moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')}`
+global.packsticker = `𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ\n👑 𝗨s𝘂ᥲ𝗿і𝗼: ${nombre}\n🤖 𝗕᥆𝘁: ${botname}\n📅 𝗙ᥱ𝗰һ𝗮: ${fecha}\n⏰ 𝗛᥆𝗿ᥲ: ${moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')}`
 global.packsticker2 = `\n𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ\n\n${dev}`
   
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
