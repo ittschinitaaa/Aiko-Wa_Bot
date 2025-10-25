@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const handler = async (m, { conn, text, usedPrefix }) => {
-if (!text) return m.reply("❀ Por favor, proporciona el nombre de una canción o artista.")
+if (!text) return m.reply("🌸 Por favor, proporciona el nombre de una canción o artista.")
 try {
 await m.react('🕒')
 const isUrl = /https?:\/\/(open\.)?spotify\.com\/track\/[a-zA-Z0-9]+/.test(text)
@@ -26,7 +26,7 @@ externalAdReply: {
 showAdAttribution: true,
 containsAutoReply: true,
 renderLargerThumbnail: true,
-title: '✧ s⍴᥆𝗍і𝖿ᥡ • mᥙsіᥴ ✧',
+title: '🌻 s⍴᥆𝗍і𝖿ᥡ • mᥙsіᥴ 🌻',
 body: dev,
 mediaType: 1,
 thumbnailUrl: data.image,
