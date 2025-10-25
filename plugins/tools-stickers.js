@@ -31,7 +31,7 @@ let texto2 = packstickers.text2 || global.packsticker2
 switch (command) {
 case 'brat': {
 text = m.quoted?.text || text
-if (!text) return conn.sendMessage(m.chat, { text: '❀ Por favor, responde a un mensaje o ingresa un texto para crear el Sticker.' }, { quoted: m })
+if (!text) return conn.sendMessage(m.chat, { text: '🦀 Por favor, responde a un mensaje o ingresa un texto para crear el Sticker.' }, { quoted: m })
 await m.react('🕒')
 const buffer = await fetchSticker(text)
 const stiker = await sticker(buffer, false, texto1, texto2)
@@ -42,7 +42,7 @@ break
 }
 case 'bratv': {
 text = m.quoted?.text || text
-if (!text) return conn.sendMessage(m.chat, { text: '❀ Por favor, responde a un mensaje o ingresa un texto para crear el Sticker.' }, { quoted: m })
+if (!text) return conn.sendMessage(m.chat, { text: '🪼 Por favor, responde a un mensaje o ingresa un texto para crear el Sticker.' }, { quoted: m })
 await m.react('🕒')
 const videoBuffer = await fetchStickerVideo(text)
 const stickerBuffer = await sticker(videoBuffer, null, texto1, texto2)
@@ -51,7 +51,7 @@ await m.react('✅')
 break
 }
 case 'emojimix': {
-if (!args[0]) return m.reply(`❀ Ingresa 2 emojis para combinar.\n> Ejemplo: *${usedPrefix + command}* 👻+👀`)
+if (!args[0]) return m.reply(`🌱 Ingresa 2 emojis para combinar.\n> Ejemplo: *${usedPrefix + command}* 👻+👀`)
 let [emoji1, emoji2] = text.split`+`
 await m.react('🕒')
 const res = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
@@ -65,13 +65,13 @@ break
 }
 case 'qc': {
 let textFinal = args.join(' ') || m.quoted?.text
-if (!textFinal) return conn.reply(m.chat, `❀ Ingresa un texto para crear el sticker.`, m)
+if (!textFinal) return conn.reply(m.chat, `🪴 Ingresa un texto para crear el sticker.`, m)
 let target = m.quoted ? await m.quoted.sender : m.sender
 const pp = await conn.profilePictureUrl(target).catch((_) => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 const nombre = await (async () => global.db.data.users[target].name || (async () => { try { const n = await conn.getName(target); return typeof n === 'string' && n.trim() ? n : target.split('@')[0] } catch { return target.split('@')[0] } })())()
 const mentionRegex = new RegExp(`@${target.split('@')[0]}`, 'g')
 let frase = textFinal.replace(mentionRegex, '')
-if (frase.length > 30) return await m.react('✖️'), conn.reply(m.chat, `ꕥ El texto no puede tener más de 30 caracteres.`, m)
+if (frase.length > 30) return await m.react('❌'), conn.reply(m.chat, `ꕥ El texto no puede tener más de 30 caracteres.`, m)
 await m.react('🕒')
 const quoteObj = { type: 'quote', format: 'png', backgroundColor: '#000000', width: 512, height: 768, scale: 2, messages: [{ entities: [], avatar: true, from: { id: 1, name: nombre, photo: { url: pp } }, text: frase, replyMessage: {} }]}
 const json = await axios.post('https://bot.lyo.su/quote/generate', quoteObj, { headers: { 'Content-Type': 'application/json' }})
