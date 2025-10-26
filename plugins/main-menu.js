@@ -5,17 +5,17 @@ let mentionedJid = await m.mentionedJid
 let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
-await m.react('🌷')   
+await m.react('🌺')   
   
 let txt = `
 ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶•︶
-> 🪻 ¡𝐇𝐨𝐥𝐚! @${userId.split('@')[0]}, 𝐒𝐨𝐲 *${botname}*, 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
+> ¡𝐇𝐨𝐥𝐚! @${userId.split('@')[0]}, 𝐒𝐨𝐲 *${botname}*, 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
 
 \`⭐ 𝖳𝖨𝖯𝖮:\` » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ' : '𝗦ᥙᑲ-𝗕᥆𝗍')}
 \`🪻 𝖵𝖤𝖱𝖲𝖨𝖮́𝖭:\` » ${vs}
-\`👑 𝖮𝖶𝖭𝖤𝖱:\` » +${suittag}
+\`👑 𝖮𝖶𝖭𝖤𝖱:\` » @+${suittag}
 \`🍯 𝖯𝖫𝖴𝖦𝖨𝖭𝖲:\` » ${totalCommands}
 \`🍄 𝖫𝖨𝖡𝖱𝖤𝖱𝖨𝖠:\` » ${libreria}
 
