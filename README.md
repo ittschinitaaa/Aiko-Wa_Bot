@@ -31,7 +31,7 @@ href="https://www.mediafire.com/file/wkinzgpb0tdx5qh/com.termux_1022.apk/file"><
 
 ### **` Instalación por termux`**
 <details>
-<summary><b💐✰ Instalación Manual</b></summary>
+<summary><b>💐✰ Instalación Manual</b></summary>
 
 > *Comandos para instalar de forma manual*
 ```bash
