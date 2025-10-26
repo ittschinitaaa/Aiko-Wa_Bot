@@ -126,7 +126,7 @@ let txt = `
 ര ׄ 🍯 ׅ #g⍴ • #іᥒ𝖿᥆grᥙ⍴᥆
 ര ׄ 🍯 ׅ #ᥣіᥒk
 
-${botname} | ${etiqueta}`.trim()
+> ${botname} | ${etiqueta}`.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
 contextInfo: {
