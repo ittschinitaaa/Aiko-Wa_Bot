@@ -22,13 +22,14 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 var canal = 'https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x'  
 var comunidad = 'https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l'
 var git = 'https://github.com/ittschinitaaa'
-var github = 'https://github.com/ittschinitaaa/Aiko-Bot' 
+var github = 'https://github.com/ittschinitaaa/Aiko-Wa_Bot' 
 var correo = 'itts.chinitaaa@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
-global.packsticker = `𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ\n👑 𝗨s𝘂ᥲ𝗿і𝗼: ${nombre}\n🤖 𝗕᥆𝘁: ${botname}\n📅 𝗙ᥱ𝗰һ𝗮: ${fecha}\n⏰ 𝗛᥆𝗿ᥲ: ${moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')}`
-global.packsticker2 = `\n𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆  ִֶָ˖·˳˖𓂃 ִֶָ\n\n${dev}`
+global.packsticker = `✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼\n👑 𝗨s𝘂ᥲ𝗿і𝗼: ${nombre}\n🤖 𝗕᥆𝘁: ${botname}\n📅 𝗙ᥱ𝗰һ𝗮: ${fecha}\n⏰ 𝗛᥆𝗿ᥲ: ${moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')}`
+global.packsticker2 = `\n✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
+\n\n${dev}`
   
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: botname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnail: await (await fetch(icono)).buffer(), sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, mentionedJid: null }}
