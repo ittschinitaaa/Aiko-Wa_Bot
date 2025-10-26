@@ -41,7 +41,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/ittschinitaaa/Aiko-Bot && cd Aiko-Bot
+git clone https://github.com/ittschinitaaa/Aiko-Wa_Bot && cd Aiko-Wa_Bot
 ```
 ```bash
 yarn install
@@ -83,19 +83,19 @@ pm2 start index
 ### En caso de detenerse
 > _Si despues que ya instalastes el bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos:_
 ```bash
-cd && cd Aiko-Bot && npm start
+cd && cd Aiko-Wa_Bot && npm start
 ```
 ----
 ### Obtener nuevo código QR 
 > *Detén el bot, haz click en el símbolo (ctrl) [default=z] usar la letra "z" + "ENTER" hasta que salga algo verdes similar a: `Aiko-Bot $`*
 > **Escribe los siguientes comandos uno x uno :**
 ```bash 
-cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run qr
+cd && cd Aiko-Wa_Bot && rm -rf sessions/Principal && npm run qr
 ```
 ----
 ### Obtener nuevo código de teléfono 
 ```bash 
-cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run code
+cd && cd Aiko-Wa_Bot && rm -rf sessions/Principal && npm run code
 ```
 </details>
 
@@ -107,14 +107,14 @@ cd && cd Aiko-Bot && rm -rf sessions/Principal && npm run code
 **Comandos para actualizar Senko-Bot de forma automática**
 
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Aiko-Bot/master/termux.sh | bash 
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/ittschinitaaa/Aiko-Wa_Bot/master/termux.sh | bash 
 ```
 **👑 Volverte owner del Bot**
 
 *Si después de instalar el bot e iniciar la sesión (deseas poner tu número es la lista de owner pon este comando:*
 
 ```bash
-cd && cd Aiko-Bot && nano settings.js
+cd && cd Aiko-Wa_Bot && nano settings.js
 ```
 #### Para que no pierda su progreso en Senko-abot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 > *Estos comandos solo funcionan para TERMUX, REPLIT, LINUX*
