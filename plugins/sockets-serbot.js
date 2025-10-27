@@ -17,8 +17,8 @@ let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
-let rtx = "\`🌷 SER BOT • MODE QR 🌷\`\n\n💻 Con otro celular o en la PC escanea este QR para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` 𖹬 Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` 𖹬 Toque dispositivos vinculados\n\n\`3\` 𖹬 Escanee este codigo QR para iniciar sesion con el bot\n\n✧ ¡Este código QR expira en 45 segundos!."
-let rtx2 = "\`🌷 SER BOT • MODE CODE 🌷\`\n\n📱 Usa este Código para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` 𖹬 Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` 𖹬 Toque dispositivos vinculados\n\n\`3\` 𖹬 Selecciona Vincular con el número de teléfono\n\n\`4\` 𖹬 Escriba el Código para iniciar sesion con el bot\n\n> ✧ No es recomendable usar tu cuenta principal."
+let rtx = "\`🌷 𝗦𝗘𝗥 𝗕𝗢𝗧 • 𝗠𝗢𝗗𝗘 𝗤𝗥 🌷\`\n\n💻 Con otro celular o en la PC escanea este QR para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` 𖹬 Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` 𖹬 Toque dispositivos vinculados\n\n\`3\` 𖹬 Escanee este codigo QR para iniciar sesion con el bot\n\n✧ ¡Este código QR expira en 45 segundos!."
+let rtx2 = "\`🌷 𝗦𝗘𝗥 𝗕𝗢𝗧 • 𝗠𝗢𝗗𝗘 𝗖𝗢𝗗𝗘 🌷\`\n\n📱 Usa este Código para convertirte en un *Sub-Bot* Temporal.\n\n\`1\` 𖹬 Haga clic en los tres puntos en la esquina superior derecha\n\n\`2\` 𖹬 Toque dispositivos vinculados\n\n\`3\` 𖹬 Selecciona Vincular con el número de teléfono\n\n\`4\` 𖹬 Escriba el Código para iniciar sesion con el bot\n\n> ✧ No es recomendable usar tu cuenta principal."
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const yukiJBOptions = {}
@@ -30,7 +30,7 @@ if (!globalThis.db.data.settings[conn.user.jid].jadibotmd) return m.reply(`ꕥ E
 let time = global.db.data.users[m.sender].Subs + 120000
 if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `ꕥ Debes esperar ${msToTime(time - new Date())} para volver a vincular un *Sub-Bot.*`, m)
 let socklimit = global.conns.filter(sock => sock?.user).length
-if (socklimit >= 10) {
+if (socklimit >= 15) {
 return m.reply(`ꕥ No se han encontrado espacios para *Sub-Bots* disponibles.`)
 }
 let mentionedJid = await m.mentionedJid
