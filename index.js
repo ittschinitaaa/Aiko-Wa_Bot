@@ -42,7 +42,7 @@ font: 'simple',
 align: 'left',
 gradient: ['green', 'white']
 })
-say('Made with love by China ❤', {
+say('Made with love by China 🍒', {
 font: 'console',
 align: 'center',
 colors: ['cyan', 'magenta', 'yellow']
