@@ -22,13 +22,13 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       await m.react('❌')
       return m.reply("☘️ No se encontraron datos de la canción")
     }
-    let cap = "*乂 ¡SHAZAM - MUSIC! 乂*\n\n"
+    let cap = "\` ¡SHAZAM - MUSIC! \`\n\n"
     for (let result of data) {
       const enlaces = Array.isArray(result.url) ? result.url.filter(x => x) : []
-      cap += `✐ Título » ${result.title}\n`
-      cap += `✦ Artista » ${result.artist}\n`
-      cap += `ⴵ Duración » ${result.duration}\n`
-      cap += `🜸 Enlaces » ${enlaces.map(i => `\n${i}`).join("\n")}\n`
+      cap += `✏️ Título » ${result.title}\n`
+      cap += `⭐ Artista » ${result.artist}\n`
+      cap += `⏳ Duración » ${result.duration}\n`
+      cap += `🔗 Enlaces » ${enlaces.map(i => `\n${i}`).join("\n")}\n`
       if (enlaces.length) cap += "••••••••••••••••••••••••••••••••••••••\n"
     }
 
@@ -37,7 +37,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         text: cap,
         contextInfo: {
           externalAdReply: {
-            title: '✧ Whats • Music ✧',
+            title: '⭐ 𝗪𝗛𝗔𝗧𝗦 • 𝗠𝗨𝗦𝗜𝗖 ⭐',
             body: dev,
             mediaType: 1,
             previewType: 0,
