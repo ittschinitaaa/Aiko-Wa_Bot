@@ -23,7 +23,7 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
     const canal = author?.name || 'Desconocido'
     
     const infoMessage = 
-    `˚∩　ׅ　🅨𝗼𝘂𝘁𝘂𝗯𝗲 🅟𝗹𝗮𝘆　ׄᰙ　ׅ
+    `˚∩　ׅ　\`🅨𝗼𝘂𝘁𝘂𝗯𝗲 🅟𝗹𝗮𝘆\`　ׄᰙ　ׅ
     
 *🎵 Titulo:* ${title}
     
