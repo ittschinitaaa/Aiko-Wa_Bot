@@ -41,9 +41,9 @@ delete global.db.data.users[who]
 conn.sendMessage(m.chat, { text: `❀ Éxito. Todos los datos del usuario @${userNumber} fueron eliminados.`, mentions: [who] }, { quoted: m })
 break
 }
-case 'restrict': case 'restringir': case 'jadibot': case 'serbot': {
+case 'jadibot': case 'serbot': {
 const value = text ? text.trim().toLowerCase() : ''
-const type = /restrict|restringir/.test(command) ? 'restrict' : /jadibot|serbot/.test(command) ? 'jadibotmd' : null
+const type = /jadibot|serbot/.test(command) ? 'jadibotmd' : null
 if (!type) return m.reply(`ꕥ Modo no reconocido.`)
 const isEnable = bot[type] || false
 const enable = value === 'enable' || value === 'on'
@@ -60,8 +60,8 @@ await m.react('✖️')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
 
-handler.help = ['backup', 'copia', 'resetuser', 'resetear', 'restrict', 'restringir']
+handler.help = ['backup', 'copia', 'resetuser', 'resetear']
 handler.tags = ['owner']
-handler.command = ['backup', 'copia', 'resetuser', 'resetear', 'restrict', 'restringir', 'jadibot', 'serbot']
+handler.command = ['backup', 'copia', 'resetuser', 'resetear', 'jadibot', 'serbot']
 
 export default handler
