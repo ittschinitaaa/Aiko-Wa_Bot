@@ -37,7 +37,7 @@ global.textbot = "𝖠іk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰
 global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
-global.banner = readFileSync('./lib/menu.jpg') //"https://files.catbox.moe/mgt4ew.jpg"
+global.banner = "https://files.catbox.moe/mgt4ew.jpg"
 global.icono = "https://files.catbox.moe/bzpcgp.jpg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
