@@ -18,9 +18,9 @@
 "author": "ittschinitaaa",
 "license": "MIT-License",
 "bugs": {
-"url": "https://github.com/The-King-Destroy/YukiBot-MD/issues"
+"url": "https://github.com/ittschinitaaa/Aiko-Wa_Bot/issues"
 },
-"homepage": "https://github.com/The-King-Destroy/YukiBot-MD#readme",
+"homepage": "https://github.com/ittschinitaaa/Aiko-Wa_Bot#readme",
 "dependencies": {
 "@hapi/boom": "^10.0.1",
 "@vitalets/google-translate-api": "^8.0.0",
