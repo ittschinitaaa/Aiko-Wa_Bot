@@ -146,7 +146,7 @@ sourceUrl: redes,
 thumbnail: await (await fetch(banner)).buffer(),
 showAdAttribution: false,
 containsAutoReply: true,
-renderLargerThumbnail: false
+renderLargerThumbnail: true
 }}}, { quoted: m })
 }
 
