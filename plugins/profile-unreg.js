@@ -34,7 +34,7 @@ let handler = async (m, { conn, text }) => {
         newsletterName: channelRD.name
       },
       externalAdReply: {
-        title: `⚡ Registro eliminado correctamente ${emojis}`,
+        title: `⚡ Registro eliminado correctamente`,
         body: `🌿 Nombre: ${nombre} • Edad: ${edad} años`,
         thumbnailUrl: pp,
         mediaType: 1,
