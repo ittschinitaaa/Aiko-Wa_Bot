@@ -1,16 +1,19 @@
-let handler = async (m, { conn, args }) => {
-    let userId = m.sender;
+import fetch from 'node-fetch'
 
-    // Verificar si el usuario está registrado
-    if (!global.db.data.users[userId] || !global.db.data.users[userId].registered) {
-        return conn.sendMessage(m.chat, { text: '❌ Debes registrarte para usar este comando.\nUsa #registro para registrarte.' }, { quoted: m });
-    }
+let handler = async (m, { conn }) => {
+    // Usuario mencionado o quien envía el mensaje
+    let mentionedJid = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 
-    let totalreg = Object.keys(global.db.data.users).length;
-    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
-    await m.react('🌻');
+    // Datos generales
+    let totalUsers = Object.keys(global.db.data.users).length
+    let totalCommands = Object.values(global.plugins).filter(v => v.help && v.tags).length
 
-    let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
+    // React al mensaje
+    await m.react('🌻')
+
+    // Mensaje del menú
+    let txt = `
+    ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶•︶
 > ¡𝐇𝐨𝐥𝐚! @${userId.split('@')[0]}, 𝐒𝐨𝐲 *${botname}*, 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
@@ -128,12 +131,13 @@ let handler = async (m, { conn, args }) => {
 ര ׄ 🍯 ׅ #g⍴ • #іᥒ𝖿᥆grᥙ⍴᥆
 ര ׄ 🍯 ׅ #ᥣіᥒk
 
-> ${botname} | ${etiqueta}`;
+> ${botname} | ${etiqueta}`.trim()
 
+    // Enviar mensaje con context info y mini-banner
     await conn.sendMessage(m.chat, {
         text: txt,
         contextInfo: {
-            mentionedJid: [userId],
+            mentionedJid: [mentionedJid],
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: channelRD.id,
@@ -152,15 +156,18 @@ let handler = async (m, { conn, args }) => {
                 renderLargerThumbnail: true
             }
         }
-    }, { quoted: m });
-};
+    }, { quoted: m })
+}
 
-handler.help = ['menu'];
-handler.tags = ['main'];
-handler.command = ['menu', 'menú', 'help'];
-handler.register = true;
+// Configuración del handler
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'menú', 'help']
 
-module.exports = handler;
+// Solo funciona si el usuario está registrado
+handler.register = true
+
+export default handler
 
 /*import fetch from 'node-fetch'
 
