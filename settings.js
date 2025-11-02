@@ -38,7 +38,7 @@ global.textbot = "𝖠іk᥆, mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰
 global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
-global.banner = "https://raw.githubusercontent.com/ittschinitaaa/storage/6580e8f717e63a29676a09ee513b44821ba9cbc2/img/menu.jpg"
+global.banner = "https://raw.githubusercontent.com/ittschinitaaa/storage/img/menu.jpg"
 global.icono = "https://files.catbox.moe/bzpcgp.jpg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
