@@ -17,7 +17,7 @@ let handler = async (m, { conn, text }) => {
         m, ctxWarn
       )
     }
-
+    await m.react("⏱️");
     await conn.reply(m.chat, '🌷 Creando captura de iPhone...', m, ctxOk)
 
     // Detectar país y zona horaria del usuario
