@@ -95,7 +95,8 @@ let handler = async (m, { conn, text }) => {
       `✨ *Captura generada exitosamente*`,
       m, ctxOk
     )
-
+    await m.react("✅");
+    
   } catch (error) {
     console.error('Error en fakewspp:', error)
     await conn.reply(m.chat, 
