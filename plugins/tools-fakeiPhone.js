@@ -18,10 +18,10 @@ let handler = async (m, { conn, text }) => {
       )
     }
 
-    await conn.reply(m.chat, '🎀 Creando captura de iPhone...', m, ctxOk)
+    await conn.reply(m.chat, '🌷 Creando captura de iPhone...', m, ctxOk)
 
     // Detectar país y zona horaria del usuario
-    let userTimeZone = 'America/Mexico_City' // Por defecto
+    let userTimeZone = 'America/Argentina/Buenos_Aires' // Por defecto
     
     try {
       // Intentar detectar desde el número del usuario
