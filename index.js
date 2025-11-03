@@ -365,7 +365,7 @@ console.log(chalk.gray(`→ Los archivos de la carpeta TMP no se pudieron elimin
 }}, 30 * 1000)
 
 // inicio autobio
-setInterval(async () => {
+/*setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
@@ -378,7 +378,7 @@ function clockString(ms) {
   const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
   const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
   return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
-}
+}*/
 // fin de autobio
 
 _quickTest().catch(console.error)
