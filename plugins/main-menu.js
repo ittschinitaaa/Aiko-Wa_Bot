@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
   // 🔧 Obtenemos datos de configuración del bot o sub-bot
   const settings = global.db.data.settings[conn.user.jid] || {}
   const botname = settings.botname || 'Aiko-Wa_Bot'
-  const banner = settings.banner || 'https://raw.githubusercontent.com/ittschinitaaa/storage/main/img/menu.jpg'
+  const banner = settings.banner || 'https://files.catbox.moe/op76f1.png'
 
   let totalreg = Object.keys(global.db.data.users).length
   let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
