@@ -1,15 +1,20 @@
 import fetch from 'node-fetch'
-import { loadSubBotConfig } from '../lib/subbot-config.js'
 
-let handler = async (m, { conn }) => {
-  const botId = conn.user.jid
-  const cfg = loadSubBotConfig(botId)
-  const { botname, banner } = cfg
+let handler = async (m, { conn, args }) => {
+  let mentionedJid = await m.mentionedJid
+  let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 
-  const userId = m.sender
+  // 🔧 Obtenemos datos de configuración del bot o sub-bot
+  const settings = global.db.data.settings[conn.user.jid] || {}
+  const botname = settings.botname || 'Aiko-Wa_Bot'
+  const banner = settings.banner || 'https://raw.githubusercontent.com/ittschinitaaa/storage/main/img/menu.jpg'
 
-  const texto = `
-̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
+  let totalreg = Object.keys(global.db.data.users).length
+  let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
+  await m.react('🌻')
+
+  let txt = `
+̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶•︶
 > ¡𝐇𝐨𝐥𝐚! @${userId.split('@')[0]}, 𝐒𝐨𝐲 *${botname}*, 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
@@ -126,26 +131,42 @@ let handler = async (m, { conn }) => {
 ര ׄ 🍯 ׅ #ძᥱᥣ • #ძᥱlete + [ᥴі𝗍ᥲr ᥙᥒ mᥱᥒsᥲȷᥱ]
 ര ׄ 🍯 ׅ #ᥣіᥒᥱᥲ • #ᥣіs𝗍᥆ᥒᥣіᥒᥱ
 ര ׄ 🍯 ׅ #g⍴ • #іᥒ𝖿᥆grᥙ⍴᥆
-ര ׄ 🍯 ׅ #ᥣіᥒk`
+ര ׄ 🍯 ׅ #ᥣіᥒk
 
-  await conn.sendMessage(m.chat, {
-    text: texto.trim(),
-    contextInfo: {
-      mentionedJid: [userId],
-      externalAdReply: {
-        title: botname,
-        body: textbot,
-        thumbnail: await (await fetch(banner)).buffer(),
-        mediaType: 1,
-        renderLargerThumbnail: true
-      }
-    }
-  }, { quoted: m })
+> ${botname} | ${etiqueta}`.trim()
+
+  await conn.sendMessage(
+    m.chat,
+    {
+      text: txt,
+      contextInfo: {
+        mentionedJid: [userId],
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: channelRD.id,
+          serverMessageId: '',
+          newsletterName: channelRD.name,
+        },
+        externalAdReply: {
+          title: botname,
+          body: textbot,
+          mediaType: 1,
+          mediaUrl: redes,
+          sourceUrl: redes,
+          thumbnail: await (await fetch(banner)).buffer(),
+          showAdAttribution: false,
+          containsAutoReply: true,
+          renderLargerThumbnail: true,
+        },
+      },
+    },
+    { quoted: m }
+  )
 }
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu']
+handler.command = ['menu', 'menú', 'help']
 
 export default handler
 
