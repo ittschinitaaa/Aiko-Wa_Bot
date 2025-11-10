@@ -50,5 +50,6 @@ m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para i
 handler.help = ["npmdl"]
 handler.tags = ["tools"]
 handler.command = ["npmdownloader", "npmjs", "npmdl", "npm"]
+handler.register = true
 
 export default handler
