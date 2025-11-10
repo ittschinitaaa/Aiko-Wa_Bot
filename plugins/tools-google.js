@@ -10,23 +10,24 @@ const response = await fetch(apiUrl)
 if (!response.ok) throw new Error('No se pudo conectar con la API')
 const result = await response.json()
 if (!result.status || !Array.isArray(result.data) || !result.data.length) {
-await m.react('✖️')
+await m.react('❌')
 return m.reply('ꕥ No se encontraron resultados para esa búsqueda.')
 }
 let replyMessage = `✦ Resultados de la búsqueda para: *${text}*\n\n`
 result.data.slice(0, maxResults).forEach((item, index) => {
-replyMessage += `❀ Título: *${index + 1}. ${item.title || 'Sin título'}*\n`
-replyMessage += `✐︎ Descripción: ${item.description ? `*${item.description}*` : '_Sin descripción_'}\n`
-replyMessage += `🜸 URL: ${item.url || '_Sin url_'}\n\n`})
+replyMessage += `\`❀ Título:\` *${index + 1}. ${item.title || 'Sin título'}*\n`
+replyMessage += `\`✐︎ Descripción:\` ${item.description ? `*${item.description}*` : '_Sin descripción_'}\n`
+replyMessage += `\`🜸 URL:\` ${item.url || '_Sin url_'}\n\n`})
 await m.reply(replyMessage.trim())
-await m.react('✔️')
+await m.react('✅')
 } catch (error) {
-await m.react('✖️')
+await m.react('❌')
 m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}.`)
 }}
 
 handler.help = ['google']
 handler.command = ['google']
 handler.group = true
+handler.register = true
 
 export default handler
