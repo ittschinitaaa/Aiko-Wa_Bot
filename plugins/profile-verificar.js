@@ -64,6 +64,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   notif += `🍒 \`𝗡𝗼𝗺𝗯𝗿𝗲:\` ${name}\n`
   notif += `🌷 \`𝗘𝗱𝗮𝗱:\` ${age} años\n`
   notif += `🍄 \`𝗨𝘀𝘂𝗮𝗿𝗶𝗼:\` @${m.sender.split('@')[0]}\n`
+  notif += `🌻 \`𝗕𝗼𝘁:\` ${botname}\n`
   notif += `🌱 \`𝗙𝗲𝗰𝗵𝗮:\` ${new Date().toLocaleString('es-AR')}`
 
   await conn.sendMessage(canalRegistro, {
@@ -72,7 +73,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
       mentionedJid: [m.sender],
       externalAdReply: {
         title: '⭐𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 ⭐',
-        body: '🌱 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐫𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐝𝐨 🌱',
+        body: '🌱 𝐍𝐮𝐞𝐯𝐨 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐫𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐝𝐨 🌱',
         thumbnailUrl: pp,
         mediaType: 1,
         renderLargerThumbnail: false
