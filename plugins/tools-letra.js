@@ -66,5 +66,6 @@ break
 handler.help = ['letra']
 handler.tags = ['fun']
 handler.command = ['letra', 'style']
+handler.register = true
 
 export default handler
