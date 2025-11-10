@@ -41,5 +41,6 @@ handler.help = ['translate']
 handler.tags = ['tools']
 handler.command = ['translate', 'traducir', 'trad']
 handler.group = true
+handler.register = true
 
 export default handler
