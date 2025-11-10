@@ -48,5 +48,6 @@ m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para i
 handler.help = ['tenor']
 handler.tags = ['tools']
 handler.command = ['tenorsearch', 'tenor']
+handler.register = true
 
 export default handler
