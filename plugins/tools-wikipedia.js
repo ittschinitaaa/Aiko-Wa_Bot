@@ -13,9 +13,9 @@ const $ = cheerio.load(link.data)
 let wik = $('#firstHeading').text().trim()
 let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
 await m.reply(`▢ *Wikipedia*\n\n‣ Buscado : ${wik}\n\n${resulw}`)
-await m.react('✔️')
+await m.react('✅')
 } catch (e) {
-await m.react('✖️')
+await m.react('❌')
 await m.reply(`⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
 
@@ -23,5 +23,6 @@ handler.help = ['wikipedia']
 handler.tags = ['tools']
 handler.command = ['wiki', 'wikipedia'] 
 handler.group = true
+handler.register = true
 
 export default handler
