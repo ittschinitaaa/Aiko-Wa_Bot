@@ -6,9 +6,9 @@ try {
 await m.react('🕒')
 let ss = await (await fetch(`https://image.thum.io/get/fullpage/${args[0]}`)).buffer()
 conn.sendFile(m.chat, ss, 'error.png', args[0], fkontak)
-await m.react('✔️')
+await m.react('✅')
 } catch (error) {
-await m.react('✖️')
+await m.react('❌')
 return conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
 }}
 
@@ -16,5 +16,6 @@ handler.help = ['ssweb', 'ss']
 handler.tags = ['tools']
 handler.command = ['ssweb', 'ss']
 handler.group = true
+handler.register = true
 
 export default handler
