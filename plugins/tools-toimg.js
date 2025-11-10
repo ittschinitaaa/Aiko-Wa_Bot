@@ -16,5 +16,6 @@ await m.react('✅')
 handler.help = ['toimg']
 handler.tags = ['tools']
 handler.command = ['toimg', 'jpg', 'img'] 
+handler.register = true
 
 export default handler
