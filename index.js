@@ -45,7 +45,7 @@ colors: ['magentaBright']
 say('Made with love by China 🍒', {
 font: 'console',
 align: 'center',
-colors: ['magenta']
+colors: ['cyan']
 })
 protoType()
 serialize()
