@@ -36,7 +36,21 @@ const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 let { say } = cfonts
-console.log(chalk.magentaBright('\n🍄 Iniciando...'))
+console.log(chalk.bold.redBright(`\n🍄 Iniciando Aiko-bot ✰\n`))
+
+say('Aiko-bot', {
+font: 'block',
+align: 'center',
+colors: ['magentaBright']
+})
+
+say(`Developed By • ittschinitaaa`, {
+font: 'console',
+align: 'center',
+colors: ['blueBright']
+})
+
+/*console.log(chalk.magentaBright('\n🍄 Iniciando...'))
 say('Aiko-Bot', {
 font: 'simple',
 align: 'left',
@@ -46,7 +60,7 @@ say('Made with love by China 🍒', {
 font: 'console',
 align: 'center',
 colors: ['cyan', 'magenta', 'yellow']
-})
+})*/
 protoType()
 serialize()
 
