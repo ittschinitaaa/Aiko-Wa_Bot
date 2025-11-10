@@ -125,7 +125,7 @@ ${botname} | ${etiqueta}`
 
 handler.command = handler.help = ['playaudio','play','playvideo', 'p]ay2']
 handler.tags = ['descargas']
-
+handler.register = true
 export default handler
 
 
