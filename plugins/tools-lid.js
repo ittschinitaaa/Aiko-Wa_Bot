@@ -16,5 +16,6 @@ handler.command = ['lid', 'mylid']
 handler.help = ['mylid', 'lid']
 handler.tags = ['tools']
 handler.group = true
+handler.register = true
 
 export default handler
