@@ -52,7 +52,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
     contextInfo: {
       externalAdReply: {
         title: '🌷 𝗨𝘀𝘂𝗮𝗿𝗶𝗼 𝗩𝗲𝗿𝗶𝗳𝗶𝗰𝗮𝗱𝗼 🌷',
-        body: 'Gracias por unirte al sistema 💫',
+        body: '𝐆𝐫𝐚𝐜𝐢𝐚𝐬 𝐩𝐨𝐫 𝐮𝐧𝐢𝐫𝐭𝐞 𝐚𝐥 𝐬𝐢𝐬𝐭𝐞𝐦𝐚 💫',
         thumbnailUrl: pp,
         mediaType: 1,
         renderLargerThumbnail: true
@@ -60,19 +60,19 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
     }
   }, { quoted: m })
 
-  let notif = `📢 *Nuevo usuario registrado*\n\n`
-  notif += `🍒 Nombre: ${name}\n`
-  notif += `🌷 Edad: ${age} años\n`
-  notif += `🍄 Usuario: @${m.sender.split('@')[0]}\n`
-  notif += `🌱 Fecha: ${new Date().toLocaleString('es-AR')}`
+  let notif = `🪻 *𝖴𝖲𝖴𝖠𝖱𝖨𝖮 𝖱𝖤𝖦𝖨𝖲𝖳𝖱𝖠𝖣𝖮*\n\n`
+  notif += `🍒 \`𝗡𝗼𝗺𝗯𝗿𝗲:\` ${name}\n`
+  notif += `🌷 \`𝗘𝗱𝗮𝗱:\` ${age} años\n`
+  notif += `🍄 \`𝗨𝘀𝘂𝗮𝗿𝗶𝗼:\` @${m.sender.split('@')[0]}\n`
+  notif += `🌱 \`𝗙𝗲𝗰𝗵𝗮:\` ${new Date().toLocaleString('es-AR')}`
 
   await conn.sendMessage(canalRegistro, {
     text: notif,
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
-        title: '【⭐】𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟【⭐】',
-        body: '𝖴𝗇 𝗇𝗎𝖾𝗏𝗈 𝗎𝗌𝗎𝖺𝗋𝗂𝗈 𝖺𝖼𝖺𝖻𝖺 𝖽𝖾 𝗎𝗇𝗂𝗋𝗌𝖾 𝖺𝗅 𝗌𝗂𝗌𝗍𝖾𝗆𝖺.',
+        title: '⭐𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗖𝗜𝗢𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 ⭐',
+        body: '🌱 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐫𝐞𝐠𝐢𝐬𝐭𝐫𝐚𝐝𝐨 🌱',
         thumbnailUrl: pp,
         mediaType: 1,
         renderLargerThumbnail: false
