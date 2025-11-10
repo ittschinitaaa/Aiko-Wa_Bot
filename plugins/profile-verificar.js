@@ -5,7 +5,7 @@ import { createHash } from 'crypto'
 import fetch from 'node-fetch'
 
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
-const canalRegistro = '0029VaLJxFgF2ZVQ7eFABC@newsletter' // 💬 Tu canal
+const canalRegistro = '120363402839382986@newsletter' // 💬 Tu canal
 
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
