@@ -11,7 +11,7 @@ const data = res.data
 if (String(data.status) !== "success") {
 throw new Error(data.message || "Falló")
 }
-let ipsearch = `✧ *I N F O - I P* ✧
+let ipsearch = `\`🍒 𝗜𝗡𝗙𝗢 - 𝗜𝗣 🍒\`
 » IP : ${data.query}
 » País : ${data.country}
 » Código de País : ${data.countryCode}
@@ -27,14 +27,15 @@ let ipsearch = `✧ *I N F O - I P* ✧
 » Mobile : ${data.mobile ? "Si" : "No"}
 » Hosting : ${data.hosting ? "Si" : "No"}`.trim()
 conn.reply(m.chat, ipsearch, m)
-await m.react('✔️')
+await m.react('✅')
 } catch (error) {
-await m.react('✖️')
+await m.react('❌')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
 }}
 
 handler.help = ['ip <alamat ip>']
 handler.tags = ['owner']
 handler.command = ['ip']
+handler.register = true
 
 export default handler
