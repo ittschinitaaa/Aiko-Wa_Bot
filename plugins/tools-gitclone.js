@@ -42,9 +42,9 @@ await conn.sendFile(m.chat, image, 'github_info.jpg', info.trim(), m)
 if (zipBuffer && zipName) {
 await conn.sendFile(m.chat, zipBuffer, zipName, null, m)
 }
-await m.react('✔️')
+await m.react('✅')
 } catch (e) {
-await m.react('✖️')
+await m.react('❌')
 conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
 
@@ -52,6 +52,7 @@ handler.help = ['gitclone']
 handler.tags = ['github']
 handler.command = ['gitclone']
 handler.group = true
+handler.register = true
 
 export default handler
 
