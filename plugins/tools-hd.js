@@ -15,9 +15,9 @@ const wrapped = engines.map(fn => fn(url).then(res => ({ engine: fn.engineName, 
 try {
 const { engine, result } = await Promise.any(wrapped)
 await conn.sendFile(m.chat, Buffer.isBuffer(result) ? result : result, 'imagen.jpg', `❀ Imagen mejorada\n» Imagen procesada. Servidor: \`${engine}\``, m)
-await m.react('✔️')
+await m.react('✅')
 } catch (err) {
-await m.react('✖️')
+await m.react('❌')
 const fallback = Array.isArray(err.errors) ? err.errors.map(e => `• ${e?.engine || 'Desconocido'}: ${e?.error?.message || e?.message || String(e)}`).join('\n') : `• ${err?.engine || 'Desconocido'}: ${err?.error?.message || err?.message || String(err)}`
 await conn.reply(m.chat, `⚠︎ No se pudo mejorar la imagen\n> Usa ${usedPrefix}report para informarlo\n\n${fallback}`, m)
 }}
@@ -25,6 +25,7 @@ await conn.reply(m.chat, `⚠︎ No se pudo mejorar la imagen\n> Usa ${usedPrefi
 handler.command = ['hd', 'remini', 'enhance']
 handler.help = ['hd']
 handler.tags = ['tools']
+handler.register = true
 
 export default handler
 
