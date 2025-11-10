@@ -30,5 +30,6 @@ handler.help = ['ver']
 handler.tags = ['tools']
 handler.command = ['readviewonce', 'read', 'readvo']
 handler.premium = true
+handler.register = true
 
 export default handler
