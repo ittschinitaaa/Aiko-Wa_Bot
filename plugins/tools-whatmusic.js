@@ -60,6 +60,7 @@ handler.help = ["whatmusic"]
 handler.tags = ["tools"]
 handler.command = ["whatmusic", "shazam"]
 handler.group = true
+handler.register = true
 
 export default handler
 
