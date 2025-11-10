@@ -45,5 +45,6 @@ handler.help = ['say']
 handler.command = ['say', 'decir']
 handler.tags = ['tools']
 handler.group = true
+handler.register = true
 
 export default handler
