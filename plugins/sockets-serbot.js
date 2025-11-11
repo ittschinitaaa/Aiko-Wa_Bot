@@ -185,55 +185,64 @@ console.log(chalk.bold.magentaBright(`\n╭┄┄┄┄┄┄┄┄┄┄┄┄�
 fs.rmdirSync(pathYukiJadiBot, { recursive: true })
 }}
 if (global.db.data == null) loadDatabase()
-if (connection == `open`) {
-if (!global.db.data?.users) loadDatabase()
-await joinChannels(conn)
-let userName, userJid 
-userName = sock.authState.creds.me.name || 'Anónimo'
-userJid = sock.authState.creds.me.jid || `${path.basename(pathYukiJadiBot)}@s.whatsapp.net`
-const id = path.basename(pathYukiJadiBot)
-const canal = "120363402839382986@newsletter" // 💫 reemplaza con tu ID real de canal
+if (connection === "open") {
+  if (!global.db.data?.users) loadDatabase()
+  await joinChannels(sock)
 
-console.log(chalk.bold.cyanBright(`\n🌷⸺⸺⸺⸺【• SUB-BOT •】⸺⸺⸺⸺🌷\n│\n│ 🌼 ${userName} (+${id}) conectado exitosamente.\n│\n🌱⸺⸺⸺【• CONECTADO •】⸺⸺⸺🌱`))
-sock.isInit = true
-global.conns.push(sock)
+  let userName, userJid
+  userName = sock.authState.creds.me.name || "Anónimo"
+  userJid = sock.authState.creds.me.jid || `${path.basename(pathYukiJadiBot)}@s.whatsapp.net`
+  const id = path.basename(pathYukiJadiBot)
+  const canal = "120363304509247330@newsletter" // 💫 reemplaza con tu canal real
 
-// 🟢 Enviar mensaje al usuario que se conectó
-if (m?.chat) {
-await conn.sendMessage(m.chat, {
-  text: isSubBotConnected(m.sender)
-    ? `> 🌷 @${m.sender.split('@')[0]}, ya estás conectado, ahora eres parte de la familia de sub-bots de Aiko...`
-    : `🌸 Has registrado un nuevo *Sub-Bot!* [@${m.sender.split('@')[0]}]\n\n> Puedes ver la información del bot usando el comando *#infobot*`,
-  mentions: [m.sender]
-}, { quoted: m })
-}
+  console.log(
+    chalk.bold.cyanBright(
+      `\n🌷⸺⸺⸺⸺【• SUB-BOT •】⸺⸺⸺⸺🌷\n│\n│ 🌼 ${userName} (+${id}) conectado exitosamente.\n│\n🌱⸺⸺⸺【• CONECTADO •】⸺⸺⸺🌱`
+    )
+  )
+  sock.isInit = true
+  global.conns.push(sock)
 
-// 🟣 Enviar notificación al canal
-try {
-let metodoConexion = mcode ? "Código de 8 dígitos" : "Código QR"
-let navegador = connectionOptions.browser[1] || "Desconocido"
-let whatsapp = "Messenger"
-let botVersion = "1.7.5 (Beta)"
-let subBotVersion = "5.0 (Beta)"
-
-let mensaje = `【 🔔 *Notificación General* 🔔 】\n\n🐾 ¡Nuevo sub-bot conectado!\n\n👤 *Usuario:* ${userName}\n🔑 *Método de conexión:* ${metodoConexion}\n🌐 *Browser:* ${navegador}\n📱 *WhatsApp:* ${whatsapp}\n🤖 *Bot:* Starlights\n⭐ *Versión del bot:* ${botVersion}\n🌀 *Versión sub-bot:* ${subBotVersion}\n\n¡Conviértete en sub-bot ahora!\nwa.me/${id}?text=/code`
-
-await conn.sendMessage(canal, {
-  text: mensaje,
-  contextInfo: {
-    externalAdReply: {
-      title: "🌟 Notificación General 🌟",
-      body: "¡Nuevo sub-bot conectado!",
-      thumbnailUrl: "https://raw.githubusercontent.com/miaoficial02/storage/main/img/menu.jpg", // puedes cambiarlo
-      sourceUrl: "https://github.com/miaoficial02",
-      mediaType: 1,
-      renderLargerThumbnail: true
-    }
+  // 🟢 Enviar mensaje al usuario que se conectó
+  if (m?.chat) {
+    await sock.sendMessage(
+      m.chat,
+      {
+        text: isSubBotConnected(m.sender)
+          ? `> 🌷 @${m.sender.split("@")[0]}, ya estás conectado, ahora eres parte de la familia de sub-bots de Aiko...`
+          : `🌸 Has registrado un nuevo *Sub-Bot!* [@${m.sender.split("@")[0]}]\n\n> Puedes ver la información del bot usando el comando *#infobot*`,
+        mentions: [m.sender],
+      },
+      { quoted: m }
+    )
   }
-}
-} catch (err) {
-console.log("⚠️ Error al enviar notificación al canal:", err)
-}
+
+  // 🟣 Enviar notificación al canal
+  try {
+    const metodoConexion = mcode ? "Código de 8 dígitos" : "Código QR"
+    const navegador = connectionOptions.browser[1] || "Desconocido"
+    const whatsapp = "Messenger"
+    const botVersion = "1.7.5 (Beta)"
+    const subBotVersion = "5.0 (Beta)"
+
+    const mensaje = `【 🔔 *Notificación General* 🔔 】\n\n🐾 ¡Nuevo sub-bot conectado!\n\n👤 *Usuario:* ${userName}\n🔑 *Método de conexión:* ${metodoConexion}\n🌐 *Browser:* ${navegador}\n📱 *WhatsApp:* ${whatsapp}\n🤖 *Bot:* Starlights\n⭐ *Versión del bot:* ${botVersion}\n🌀 *Versión sub-bot:* ${subBotVersion}\n\n✨ Conviértete en sub-bot ahora:\nwa.me/${id}?text=/code`
+
+    await sock.sendMessage(canal, {
+      text: mensaje,
+      contextInfo: {
+        externalAdReply: {
+          title: "🌟 Notificación General 🌟",
+          body: "¡Nuevo sub-bot conectado!",
+          thumbnailUrl: "https://raw.githubusercontent.com/miaoficial02/storage/main/img/menu.jpg", // cambia si querés
+          sourceUrl: "https://github.com/miaoficial02",
+          mediaType: 1,
+          renderLargerThumbnail: true,
+        },
+      },
+    })
+  } catch (err) {
+    console.log("⚠️ Error al enviar notificación al canal:", err)
+  }
 }
 setInterval(async () => {
 if (!sock.user) {
