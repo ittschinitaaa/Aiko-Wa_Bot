@@ -14,16 +14,6 @@ throw false
 chat.welcome = isEnable
 break
 }
-        case 'antibot':
-    case 'antibots':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
-      chat.antiBot = isEnable
-      break
 case 'modoadmin': case 'onlyadmin': {
 if (m.isGroup && !(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
