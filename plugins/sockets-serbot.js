@@ -192,7 +192,7 @@ let userName, userJid
 userName = sock.authState.creds.me.name || 'Anónimo'
 userJid = sock.authState.creds.me.jid || `${path.basename(pathYukiJadiBot)}@s.whatsapp.net`
 const id = path.basename(pathYukiJadiBot)
-const canal = "120363304509247330@newsletter" // 💫 reemplaza con tu ID real de canal
+const canal = "120363402839382986@newsletter" // 💫 reemplaza con tu ID real de canal
 
 console.log(chalk.bold.cyanBright(`\n🌷⸺⸺⸺⸺【• SUB-BOT •】⸺⸺⸺⸺🌷\n│\n│ 🌼 ${userName} (+${id}) conectado exitosamente.\n│\n🌱⸺⸺⸺【• CONECTADO •】⸺⸺⸺🌱`))
 sock.isInit = true
