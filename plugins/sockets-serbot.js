@@ -230,7 +230,7 @@ await conn.sendMessage(canal, {
       renderLargerThumbnail: true
     }
   }
-})
+}
 } catch (err) {
 console.log("⚠️ Error al enviar notificación al canal:", err)
 }
