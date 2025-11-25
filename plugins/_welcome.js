@@ -17,7 +17,7 @@ async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
     const desc = groupMetadata.desc?.toString() || 'Sin descripción'
 
     const mensaje = (chat.sWelcome || 'Edita con *#setwelcome*')
-        .replace(/{usuario}/g, username)
+       // .replace(/{usuario}/g, username)
         .replace(/{grupo}/g, `*${groupMetadata.subject}*`)
         .replace(/{desc}/g, desc)
 
