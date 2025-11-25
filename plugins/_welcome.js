@@ -22,13 +22,13 @@ async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
         .replace(/{desc}/g, desc)
 
     const caption = `
-🌸 *Bienvenido/a a ${groupMetadata.subject}* 🌸
+ꕤ *Bienvenido/a a ${groupMetadata.subject}* ! 
 
-✨ Usuario: ${username}
+    ✰ ${username}
 ✦ ${mensaje}
 
-👥 *Ahora somos:* ${groupSize} miembros
-🗓 *Fecha:* ${fecha}
+☆ *Ahora somos:* ${groupSize} miembros
+☆ *Fecha:* ${fecha}
 
 ૮꒰⸝⸝> ༝ <⸝⸝꒱ა ¡Disfruta tu estadía!
 > Usa *#help* para ver la lista de comandos.
