@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
 const handler = async (m, { conn, args }) => {
   try {
@@ -7,7 +7,9 @@ const handler = async (m, { conn, args }) => {
     const emogis = args.slice(1).join(" ");
 
     if (!url || !emogis) {
-      return m.reply("🚩 Uso correcto: /react https://whatsapp.com/channel/0029VbApwZ9ISTkEBb6ttS3F/01918 🍃, 🌱, 🥳, 🤣");
+      return m.reply(
+        "🚩 Uso correcto: /react https://whatsapp.com/channel/xxx 🍃, 🌱, 🥳, 🤣"
+      );
     }
 
     const lista = emogis
@@ -26,19 +28,21 @@ const handler = async (m, { conn, args }) => {
     m.react("⏱️");
 
     const res = await fetch(apiUrl);
+
     if (!res.ok) {
       m.react("❗");
       return m.reply("🚩 Error al conectar con la API");
     }
 
     const json = await res.json();
+
     if (!json.status) {
       m.react("❌");
       return m.reply("🚩 No se pudo enviar la reacción");
     }
 
     m.react("🎡");
-    return m.reply(`🌾 Reacción Enviada Correctamente!`);
+    return m.reply("🌾 Reacción Enviada Correctamente!");
   } catch (err) {
     console.error(err);
     m.react("❌");
@@ -50,4 +54,4 @@ handler.help = ["react"];
 handler.tags = ["tools"];
 handler.command = ["react"];
 
-module.exports = handler;
+export default handler;
