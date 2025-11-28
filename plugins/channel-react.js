@@ -1,5 +1,5 @@
 // Pon aquí el ID de tu canal newsletter:
-const MY_CHANNEL = "AQUI_TU_CANAL@newsletter";
+const MY_CHANNEL = "120363345778623279@newsletter";
 
 // Emojis que quieres usar para reaccionar
 const MANY_EMOJIS = [
