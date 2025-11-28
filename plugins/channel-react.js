@@ -1,57 +1,44 @@
-import fetch from "node-fetch";
+// Pon aquí el ID de tu canal newsletter:
+const MY_CHANNEL = "AQUI_TU_CANAL@newsletter";
 
-const handler = async (m, { conn, args }) => {
+// Emojis que quieres usar para reaccionar
+const MANY_EMOJIS = [
+  "😂", "🤣", "😍", "🥰", "😱", "🔥", "💖", "✨", "😎", "🤩",
+  "🫶", "🌸", "💫", "🎉", "😘", "😻", "🍓", "⚡", "🌈", "🧸",
+  "😳", "😜", "😇", "👀", "💗", "🍀", "🌙", "⭐", "💥", "🔮"
+];
+
+const handler = async (m, { conn }) => {
   try {
-    const key = "stellar-rWQZ5POV";
-    const url = args[0];
-    const emogis = args.slice(1).join(" ");
+    // Si no viene de un newsletter, no hace nada
+    if (!m.key.remoteJid?.includes("@newsletter")) return;
 
-    if (!url || !emogis) {
-      return m.reply(
-        "🚩 Uso correcto: /react https://whatsapp.com/channel/xxx 🍃, 🌱, 🥳, 🤣"
-      );
+    // Si no es tu canal, también ignorará
+    if (m.key.remoteJid !== MY_CHANNEL) return;
+
+    console.log("⚡ Nuevo post del canal detectado, enviando reacciones...");
+
+    // Reaccionar con MUCHOS emojis
+    for (const emoji of MANY_EMOJIS) {
+      await conn.sendMessage(m.key.remoteJid, {
+        react: {
+          text: emoji,
+          key: m.key
+        }
+      });
+
+      // Pausa opcional para evitar limite/spam  
+      await new Promise(res => setTimeout(res, 200));
     }
 
-    const lista = emogis
-      .split(",")
-      .map(e => e.trim())
-      .filter(e => e);
+    console.log("✨ Reacciones enviadas correctamente.");
 
-    if (lista.length === 0 || lista.length > 4) {
-      m.react("⚠️");
-      return m.reply("🚩 Debes ingresar entre 1 y 4 emojis separados por coma");
-    }
-
-    const reactParam = lista.join(", ");
-    const apiUrl = `https://api.stellarwa.xyz/whatsapp/react-ch?url=${url}&react=${reactParam}&key=${key}`;
-
-    m.react("⏱️");
-
-    const res = await fetch(apiUrl);
-
-    if (!res.ok) {
-      m.react("❗");
-      return m.reply("🚩 Error al conectar con la API");
-    }
-
-    const json = await res.json();
-
-    if (!json.status) {
-      m.react("❌");
-      return m.reply("🚩 No se pudo enviar la reacción");
-    }
-
-    m.react("🎡");
-    return m.reply("🌾 Reacción Enviada Correctamente!");
   } catch (err) {
-    console.error(err);
-    m.react("❌");
-    return m.reply("🚩 Ocurrió un error inesperado");
+    console.error("❌ Error reaccionando al canal:", err);
   }
 };
 
-handler.help = ["react"];
-handler.tags = ["tools"];
-handler.command = ["react"];
+// Listener automático
+handler.before = handler;
 
 export default handler;
