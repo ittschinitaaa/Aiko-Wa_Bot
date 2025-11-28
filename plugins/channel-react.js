@@ -1,44 +1,40 @@
-// Pon aquí el ID de tu canal newsletter:
-const MY_CHANNEL = "120363345778623279@newsletter";
-
-// Emojis que quieres usar para reaccionar
-const MANY_EMOJIS = [
-  "😂", "🤣", "😍", "🥰", "😱", "🔥", "💖", "✨", "😎", "🤩",
-  "🫶", "🌸", "💫", "🎉", "😘", "😻", "🍓", "⚡", "🌈", "🧸",
-  "😳", "😜", "😇", "👀", "💗", "🍀", "🌙", "⭐", "💥", "🔮"
-];
-
-const handler = async (m, { conn }) => {
+const handler = async (m, { conn, args }) => {
   try {
-    // Si no viene de un newsletter, no hace nada
-    if (!m.key.remoteJid?.includes("@newsletter")) return;
+    const texto = args.join(" ");
+    const emojis = ["🤣","🔥","💖","😎","🌸","🎉","🥳","🍀","⭐","😻"];
 
-    // Si no es tu canal, también ignorará
-    if (m.key.remoteJid !== MY_CHANNEL) return;
+    if (!texto) {
+      return m.reply("⚠️ Uso correcto: *#reactch Hola canal*");
+    }
 
-    console.log("⚡ Nuevo post del canal detectado, enviando reacciones...");
+    // ID del canal (newsletter)
+    const channelId = "120363345778623279@newsletter"; // reemplázalo por el real
 
-    // Reaccionar con MUCHOS emojis
-    for (const emoji of MANY_EMOJIS) {
-      await conn.sendMessage(m.key.remoteJid, {
+    // 1. Enviar mensaje al canal
+    const enviado = await conn.sendMessage(channelId, { text: texto });
+
+    // 2. Reaccionar varias veces al mensaje enviado
+    for (let emoji of emojis) {
+      await conn.sendMessage(channelId, {
         react: {
           text: emoji,
-          key: m.key
+          key: enviado.key
         }
       });
 
-      // Pausa opcional para evitar limite/spam  
-      await new Promise(res => setTimeout(res, 200));
+      await new Promise(r => setTimeout(r, 500)); // mini delay
     }
 
-    console.log("✨ Reacciones enviadas correctamente.");
+    m.reply("✅ Mensaje enviado y reaccionado con éxito!");
 
-  } catch (err) {
-    console.error("❌ Error reaccionando al canal:", err);
+  } catch (e) {
+    console.error(e);
+    m.reply("❌ Ocurrió un error al reaccionar en el canal");
   }
 };
 
-// Listener automático
-handler.before = handler;
+handler.help = ["reactch"];
+handler.tags = ["tools"];
+handler.command = ["reactch"];
 
-export default handler;
+module.exports = handler;
