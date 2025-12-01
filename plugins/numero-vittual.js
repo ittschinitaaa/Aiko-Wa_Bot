@@ -3,7 +3,7 @@
 import { promises as fs } from 'fs'
 import axios from 'axios'
 
-const DB_FILE = './database/numvirtual.json'
+const DB_FILE = './lib/numvirtual.json'
 
 const COUNTRIES = {
   venezuela: {
