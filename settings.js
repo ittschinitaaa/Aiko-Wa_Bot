@@ -39,7 +39,7 @@ global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒ�
 global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.etiqueta = "𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ"
 global.currency = "dólares 💵"
-global.banner = "https://files.catbox.moe/op76f1.png"//"https://files.catbox.moe/mgt4ew.jpg"
+global.banner = "https://files.catbox.moe/mgt4ew.jpg"
 global.icono = "https://files.catbox.moe/bzpcgp.jpg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
