@@ -6,19 +6,7 @@ let mentionedJid = await m.mentionedJid
 let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
- const jam = moment.tz("America/Argentina/Buenos_Aires").format("HH:mm:ss");
-    const saludo =
-      jam < "05:00:00"
-        ? "🄵𝖾𝗅𝗂𝗓 🄼𝖺𝖽𝗋𝗎𝗀𝖺𝖽𝖺 🌟"
-        : jam < "11:00:00"
-        ? "🄱𝗎𝖾𝗇 🄳𝗂́𝖺 🌤"
-        : jam < "15:00:00"
-        ? "🄵𝖾𝗅𝗂𝗓 🅂𝗂𝖾𝗌𝗍𝖺 ⛅"
-        : jam < "19:00:00"
-        ? "🄱𝗎𝖾𝗇𝖺𝗌 🅃𝖺𝗋𝖽𝖾𝗌 🌆"
-        : jam < "20:00:00"
-        ? "🄱𝗎𝖾𝗇𝖺𝗌 🄽𝗈𝖼𝗁𝖾𝗌 🌙", 
-  
+
 let txt = `
 ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶•︶
@@ -27,7 +15,6 @@ let txt = `
 
 \`⭐ 𝖳𝖨𝖯𝖮:\` » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
 \`🪻 𝖵𝖤𝖱𝖲𝖨𝖮́𝖭:\` » ${vs}
-\`👋🏻 𝖲𝖠𝖫𝖴𝖣𝖮:\` ${saludo}
 \`👑 𝖮𝖶𝖭𝖤𝖱:\` » +${suittag}
 \`🍯 𝖯𝖫𝖴𝖦𝖨𝖭𝖲:\` » ${totalCommands}
 \`🍄 𝖫𝖨𝖡𝖱𝖤𝖱𝖨𝖠:\` » ${libreria}
