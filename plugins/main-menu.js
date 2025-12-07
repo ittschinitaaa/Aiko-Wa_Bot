@@ -1,12 +1,8 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 import fs from 'fs'
 import PhoneNumber from 'awesome-phonenumber'
 import moment from 'moment-timezone'
-/*import baileys from '@whiskeysockets/baileys'
-
-const { generateWAMessageFromContent, generateWAMessageContent, proto } = baileys
-*/
 let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
   try {
     await m.react('🍁')
@@ -100,11 +96,6 @@ ${readMore}
 ${readMore}
      *✎ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs ✰*`.trim()
 
-/*    const { imageMessage } = await generateWAMessageContent(
-      { image: { url: imageUrl } },
-      { upload: conn.waUploadToServer }
-    )
-*/
     const icon = [
       'https://raw.githubusercontent.com/AkiraDevX/uploads/main/uploads/1763911352440_131724.jpeg',
       'https://raw.githubusercontent.com/AkiraDevX/uploads/main/uploads/1763911305951_36243.jpeg',
@@ -137,46 +128,6 @@ ${readMore}
       }
     }
   }
-/*      
-    const msg = generateWAMessageFromContent(m.chat, {
-      viewOnceMessage: {
-        message: {
-          interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-            body: proto.Message.InteractiveMessage.Body.fromObject({
-              text: infoUser + menuTexto
-            }),
-            footer: proto.Message.InteractiveMessage.Footer.fromObject({
-              text: dev
-            }),
-            header: proto.Message.InteractiveMessage.Header.fromObject({
-              title: '',
-              hasMediaAttachment: true,
-              imageMessage
-            }),
-            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-              buttons: [
-                {
-                  name: "cta_url",
-                  buttonParamsJson: JSON.stringify({
-                    display_text: "❐ 𝗖𝗔𝗡𝗔𝗟 ⼢",
-                    url: channel,
-                    merchant_url: channel
-                  })
-                },
-                {
-                  name: "cta_url",
-                  buttonParamsJson: JSON.stringify({
-                    display_text: "✿ 𝗚𝗜𝗧𝗛𝗨𝗕 ⼢",
-                    url: github,
-                    merchant_url: github
-                  })
-                }
-              ]
-            })
-          })
-        }
-      }
-    }, { quoted: fkontak })*/
 
 await conn.sendMessage(m.chat, { 
 text: infoUser + menuTexto,
@@ -234,9 +185,9 @@ function ucapan() {
     res = "🅑𝖚𝖊𝖓𝖆𝖘 ɴᴏᴄʜᴇ𝓢 🌌"
 
   return res
-}
+}*/
 
-/*import fetch from 'node-fetch'
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args }) => {
 let mentionedJid = await m.mentionedJid
@@ -399,4 +350,4 @@ handler.tags = ['main']
 handler.command = ['menu', 'menú', 'help']
 
 export default handler
-*/
+
